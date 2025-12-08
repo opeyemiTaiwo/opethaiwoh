@@ -13,7 +13,6 @@
   --surface: #1E2328;
   --surface-light: #252A31;
   --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-accent: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   --gradient-gold: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
   --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.15);
   --shadow-medium: 0 20px 60px rgba(0, 0, 0, 0.25);
@@ -24,7 +23,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   background: var(--primary-dark);
   color: var(--text-primary);
   line-height: 1.7;
@@ -51,7 +50,7 @@ body {
   border-radius: 4px;
 }
 
-/* Navigation Bar */
+/* Navigation */
 .navbar {
   position: fixed;
   top: 0;
@@ -62,7 +61,6 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 20px 0;
   z-index: 1000;
-  transition: all 0.3s ease;
 }
 
 .nav-container {
@@ -72,7 +70,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
 }
 
 .logo {
@@ -96,7 +93,6 @@ body {
 }
 
 .logo a {
-  font-family: 'Space Grotesk', sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--text-primary);
@@ -108,7 +104,7 @@ body {
   color: var(--accent-gold);
 }
 
-/* Hamburger Menu */
+/* Hamburger */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -128,7 +124,6 @@ body {
   background: white;
   border-radius: 10px;
   transition: all 0.3s ease;
-  transform-origin: center;
 }
 
 .hamburger.active span:nth-child(1) {
@@ -143,7 +138,6 @@ body {
   transform: rotate(-45deg) translate(7px, -7px);
 }
 
-/* Overlay */
 .overlay {
   display: none;
 }
@@ -152,7 +146,6 @@ body {
   display: flex;
   list-style: none;
   gap: 40px;
-  align-items: center;
 }
 
 .nav-menu li a {
@@ -176,18 +169,12 @@ body {
   transition: width 0.3s ease;
 }
 
-.nav-menu li a:hover,
-.nav-menu li a.active {
-  color: var(--text-primary);
-}
-
-.nav-menu li a:hover::after,
-.nav-menu li a.active::after {
+.nav-menu li a:hover::after {
   width: 100%;
 }
 
-.nav-menu li a.active {
-  color: var(--accent-gold);
+.nav-menu li a:hover {
+  color: var(--text-primary);
 }
 
 /* Main Content */
@@ -197,13 +184,11 @@ body {
   margin-top: 90px;
 }
 
-/* Common Section Styles */
 section {
   padding: 120px 40px;
 }
 
 .section-title {
-  font-family: 'Playfair Display', serif;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 600;
   text-align: center;
@@ -234,10 +219,8 @@ section {
 
 /* Hero Section */
 .hero-section {
-  position: relative;
   background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%);
   text-align: center;
-  overflow: hidden;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -245,20 +228,7 @@ section {
   padding: 120px 40px 80px;
 }
 
-.hero-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 60% 70%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
-  opacity: 0.3;
-  z-index: 1;
-}
-
 .hero-content {
-  position: relative;
-  z-index: 2;
   max-width: 900px;
 }
 
@@ -278,7 +248,6 @@ section {
 }
 
 .hero-title {
-  font-family: 'Playfair Display', serif;
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 600;
   margin-bottom: 30px;
@@ -294,7 +263,6 @@ section {
   color: var(--text-secondary);
   max-width: 700px;
   margin: 0 auto 40px;
-  font-weight: 400;
   line-height: 1.6;
 }
 
@@ -324,7 +292,6 @@ section {
 /* Featured Section */
 .featured-section {
   background: var(--primary-light);
-  position: relative;
   padding-bottom: 100px;
 }
 
@@ -353,10 +320,6 @@ section {
 
 .featured-icon {
   font-size: 3rem;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   margin-bottom: 25px;
 }
 
@@ -375,7 +338,7 @@ section {
 
 /* About Section */
 .about-section {
-  padding-bottom: 0px;
+  padding-bottom: 0;
 }
 
 .about-container {
@@ -402,7 +365,6 @@ section {
 }
 
 .about-details h2 {
-  font-family: 'Playfair Display', serif;
   font-size: clamp(2rem, 3vw, 2.5rem);
   font-weight: 600;
   margin-bottom: 30px;
@@ -419,16 +381,6 @@ section {
   margin-bottom: 25px;
 }
 
-/* Bio Links */
-.bio-links {
-  margin-top: 60px;
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-}
-
 /* Link Cards */
 .link-cards-container {
   display: grid;
@@ -438,6 +390,13 @@ section {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.bio-links {
+  margin-top: 60px;
+  max-width: 1400px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
 }
 
 .link-card {
@@ -456,12 +415,8 @@ section {
   border-color: var(--accent-gold);
 }
 
-.link-card i {
+.link-icon {
   font-size: 2.5rem;
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   margin-bottom: 20px;
 }
 
@@ -486,11 +441,10 @@ section {
 /* Organizations */
 .organizations {
   background: var(--surface);
-  margin: 80px auto;
+  margin: 80px auto 0;
   border-radius: 30px;
   max-width: 1400px;
   padding: 80px 40px;
-  margin-bottom: 0;
 }
 
 .org-container {
@@ -532,7 +486,6 @@ section {
 .org-links {
   display: flex;
   gap: 15px;
-  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -557,7 +510,7 @@ section {
   border-color: var(--accent-gold);
 }
 
-/* Leadership Positions */
+/* Leadership */
 .leadership-positions {
   margin-top: 60px;
   padding: 40px;
@@ -570,13 +523,6 @@ section {
   font-size: clamp(1.3rem, 2vw, 1.5rem);
   margin-bottom: 20px;
   color: var(--text-primary);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.leadership-positions h3 i {
-  color: var(--accent-gold);
 }
 
 .leadership-positions > p {
@@ -623,7 +569,6 @@ section {
   font-weight: 600;
   min-width: 60px;
   text-align: center;
-  transition: all 0.3s ease;
 }
 
 .leadership-note {
@@ -633,30 +578,20 @@ section {
   font-size: clamp(0.85rem, 1.2vw, 0.95rem);
 }
 
-/* Speaking Section */
+/* Speaking */
 .speaking-section {
   text-align: center;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 40px;
 }
 
 .speaking-icon {
   font-size: clamp(3.5rem, 6vw, 5rem);
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   margin-bottom: 30px;
 }
 
-.speaking-link-button {
-  margin-top: 30px;
-}
-
-/* Publications Section */
+/* Publications */
 .publications-section {
   background: var(--primary-light);
-  position: relative;
   padding-bottom: 100px;
 }
 
@@ -683,12 +618,8 @@ section {
   border-color: var(--accent-gold);
 }
 
-.publication-card i {
+.publication-icon {
   font-size: 3rem;
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   margin-bottom: 25px;
 }
 
@@ -733,7 +664,6 @@ section {
   box-shadow: var(--shadow-medium);
 }
 
-/* Book Image Slider */
 .book-image {
   height: 450px;
   background: #ffffff;
@@ -753,7 +683,6 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
 }
 
 .book-slide img {
@@ -763,7 +692,6 @@ section {
   object-fit: contain;
 }
 
-/* Slider Controls */
 .slider-arrow {
   position: absolute;
   top: 50%;
@@ -775,9 +703,6 @@ section {
   height: 50px;
   border-radius: 50%;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 1.5rem;
   transition: all 0.3s ease;
   z-index: 100;
@@ -785,7 +710,6 @@ section {
 
 .slider-arrow:hover {
   background: rgba(212, 175, 55, 0.9);
-  transform: translateY(-50%) scale(1.1);
 }
 
 .slider-arrow.prev {
@@ -796,7 +720,6 @@ section {
   right: 10px;
 }
 
-/* Slider Dots */
 .slider-dots {
   position: absolute;
   bottom: 15px;
@@ -820,7 +743,6 @@ section {
 
 .slider-dot:hover {
   background: rgba(255, 255, 255, 0.8);
-  transform: scale(1.2);
 }
 
 .slider-dot.active {
@@ -828,13 +750,11 @@ section {
   transform: scale(1.3);
 }
 
-/* Book Content */
 .book-content {
   padding: 30px;
 }
 
 .book-title {
-  font-family: 'Playfair Display', serif;
   font-size: clamp(1.3rem, 2vw, 1.6rem);
   font-weight: 600;
   margin-bottom: 15px;
@@ -870,7 +790,7 @@ section {
   box-shadow: var(--shadow-medium);
 }
 
-/* Features Section */
+/* Features */
 .features-section-wrapper {
   background: var(--surface);
   margin: 80px auto 0;
@@ -903,10 +823,6 @@ section {
 
 .feature-icon {
   font-size: 3rem;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   margin-bottom: 25px;
 }
 
@@ -923,7 +839,7 @@ section {
   font-size: clamp(0.9rem, 1.3vw, 1rem);
 }
 
-/* Subscribe Section */
+/* Subscribe */
 .subscribe-section {
   padding: 80px 40px;
 }
@@ -939,7 +855,6 @@ section {
 }
 
 .subscribe-form h3 {
-  font-family: 'Playfair Display', serif;
   font-size: clamp(1.5rem, 3vw, 2rem);
   margin-bottom: 15px;
   color: var(--text-primary);
@@ -1010,7 +925,7 @@ section {
   font-size: clamp(0.9rem, 1.3vw, 1rem);
 }
 
-/* Contact Section */
+/* Contact */
 .contact-section {
   padding: 120px 40px 80px;
   margin: 0 auto;
@@ -1041,6 +956,7 @@ section {
   height: 60px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  text-decoration: none;
 }
 
 .social-links a:hover {
@@ -1054,39 +970,7 @@ section {
   color: var(--text-secondary);
 }
 
-/* Responsive Design - Tablet */
-@media (max-width: 968px) {
-  section {
-    padding: 80px 30px;
-  }
-
-  .hero-section {
-    padding: 100px 30px 80px;
-  }
-
-  .featured-grid,
-  .publications-container,
-  .features-container {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-  }
-
-  .org-container {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-
-  .organizations,
-  .features-section-wrapper {
-    padding: 60px 30px;
-    margin: 60px 20px;
-  }
-
-  .subscribe-form {
-    padding: 40px 30px;
-  }
-}
-
-/* Responsive Design - Mobile */
+/* Responsive - Mobile */
 @media (max-width: 768px) {
   .hamburger {
     display: flex !important;
@@ -1095,10 +979,7 @@ section {
   .overlay {
     display: block;
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: 999;
   }
@@ -1112,12 +993,9 @@ section {
     width: 70%;
     max-width: 300px;
     height: 100vh;
-    text-align: left;
     transition: right 0.3s ease;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
-    padding: 5rem 0 2rem 0;
+    padding: 5rem 0 2rem;
     gap: 0;
-    overflow-y: auto;
     z-index: 1000;
   }
 
@@ -1132,8 +1010,6 @@ section {
   .nav-menu li a {
     display: block;
     padding: 1.2rem 2rem;
-    width: 100%;
-    border-radius: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
@@ -1164,11 +1040,6 @@ section {
     padding: 80px 20px;
   }
 
-  .speaking-section {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-
   .featured-grid,
   .org-container,
   .publications-container,
@@ -1193,25 +1064,15 @@ section {
   .organizations,
   .features-section-wrapper {
     padding: 60px 20px;
-    margin: 60px 10px;
-  }
-
-  .organizations {
-    margin-bottom: 0;
+    margin: 60px 10px 0;
   }
 
   .position-item {
     flex-direction: column;
-    text-align: center;
     gap: 15px;
   }
 
-  .contact-section {
-    padding: 80px 20px 60px;
-  }
-
   .subscribe-form {
-    margin: 0 10px;
     padding: 40px 20px;
   }
 
@@ -1228,12 +1089,6 @@ section {
 
   .org-links {
     flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .org-link {
-    width: 100%;
-    justify-content: center;
   }
 
   .slider-arrow {
@@ -1245,13 +1100,8 @@ section {
   .book-image {
     height: 380px;
   }
-
-  .book-card {
-    max-width: 100%;
-  }
 }
 
-/* Small Mobile */
 @media (max-width: 480px) {
   .nav-menu {
     width: 80%;
@@ -1262,17 +1112,9 @@ section {
     height: 160px;
   }
 
-  .social-links a {
-    margin: 0 10px;
-    width: 45px;
-    height: 45px;
-    font-size: 1.3rem;
-  }
-
   .slider-arrow {
     width: 35px;
     height: 35px;
-    font-size: 1rem;
   }
 
   .slider-arrow.prev {
@@ -1285,28 +1127,5 @@ section {
 
   .book-image {
     height: 320px;
-  }
-
-  .slider-dots {
-    bottom: 10px;
-  }
-
-  .slider-dot {
-    width: 10px;
-    height: 10px;
-  }
-}
-
-/* Landscape orientation */
-@media (max-height: 600px) and (orientation: landscape) {
-  .hero-section {
-    min-height: auto;
-    padding: 100px 20px 60px;
-  }
-
-  .hero-image {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 20px;
   }
 }
