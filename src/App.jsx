@@ -3,33 +3,11 @@ import './App.css';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0);
   const [formData, setFormData] = useState({ email: '' });
   const [showSuccess, setShowSuccess] = useState(false);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
-
-  const handleNavClick = () => {
-    setMenuOpen(false);
-  };
-
-  // Book slider
-  const bookImages = [
-    '/images/Full-nw.png',
-    '/images/FT-nw.png',
-    '/images/BK-nw.png'
-  ];
-
-  const moveSlide = (direction) => {
-    let newSlide = currentSlide + direction;
-    if (newSlide < 0) newSlide = bookImages.length - 1;
-    if (newSlide >= bookImages.length) newSlide = 0;
-    setCurrentSlide(newSlide);
-  };
-
-  const goToSlide = (index) => setCurrentSlide(index);
-
-  // Form handling
+  const handleNavClick = () => setMenuOpen(false);
   const handleChange = (e) => setFormData({ email: e.target.value });
 
   const handleSubmit = (e) => {
@@ -272,31 +250,11 @@ function App() {
             from leading practitioners.
           </p>
 
-          {/* Book Card */}
+          {/* Book Card - Single Image Display */}
           <div className="book-card">
             <div className="book-image">
-              <div className="book-slider" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
-                {bookImages.map((img, index) => (
-                  <div key={index} className="book-slide">
-                    <img src={img} alt={`Career Path in Tech - ${index + 1}`} />
-                  </div>
-                ))}
-              </div>
-
-              <button className="slider-arrow prev" onClick={() => moveSlide(-1)}>‹</button>
-              <button className="slider-arrow next" onClick={() => moveSlide(1)}>›</button>
-
-              <div className="slider-dots">
-                {bookImages.map((_, index) => (
-                  <button 
-                    key={index}
-                    className={`slider-dot ${currentSlide === index ? 'active' : ''}`}
-                    onClick={() => goToSlide(index)}
-                  ></button>
-                ))}
-              </div>
+              <img src="/images/Full-nw.png" alt="Career Path in Tech" />
             </div>
-
             <div className="book-content">
               <h3 className="book-title">Career Path in Tech: A Comprehensive Guide for the AI Age</h3>
               <p className="book-description">
