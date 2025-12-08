@@ -2,25 +2,18 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [activeSection, setActiveSection] = useState('home');
   const [menuOpen, setMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [formData, setFormData] = useState({ email: '' });
+  const [showSuccess, setShowSuccess] = useState(false);
 
-  const handleNavClick = (section) => {
-    setActiveSection(section);
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  const handleNavClick = () => {
     setMenuOpen(false);
-    // Smooth scroll to section
-    const element = document.getElementById(section);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
   };
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
-  // Book slider functions
+  // Book slider
   const bookImages = [
     '/images/Full-nw.png',
     '/images/FT-nw.png',
@@ -34,13 +27,28 @@ function App() {
     setCurrentSlide(newSlide);
   };
 
-  const goToSlide = (index) => {
-    setCurrentSlide(index);
+  const goToSlide = (index) => setCurrentSlide(index);
+
+  // Form handling
+  const handleChange = (e) => setFormData({ email: e.target.value });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      mode: 'no-cors'
+    }).then(() => {
+      setShowSuccess(true);
+      setFormData({ email: '' });
+      setTimeout(() => setShowSuccess(false), 5000);
+    });
   };
 
   return (
     <div className="App">
-      {/* Navigation Bar */}
+      {/* Navigation */}
       <nav className="navbar">
         <div className="nav-container">
           <div className="logo">
@@ -48,33 +56,25 @@ function App() {
             <a href="#home">Opeyemi Adeniran</a>
           </div>
           
-          {/* Hamburger Menu Button */}
-          <button 
-            className={`hamburger ${menuOpen ? 'active' : ''}`}
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
+          <button className={`hamburger ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
             <span></span>
             <span></span>
             <span></span>
           </button>
 
-          {/* Navigation Menu */}
           <ul className={`nav-menu ${menuOpen ? 'active' : ''}`}>
-            <li><a href="#home" onClick={() => handleNavClick('home')}>Home</a></li>
-            <li><a href="#about" onClick={() => handleNavClick('about')}>About</a></li>
-            <li><a href="#speaking" onClick={() => handleNavClick('speaking')}>Speaking</a></li>
-            <li><a href="#publications" onClick={() => handleNavClick('publications')}>Publications</a></li>
-            <li><a href="#books" onClick={() => handleNavClick('books')}>Books</a></li>
-            <li><a href="#contact" onClick={() => handleNavClick('contact')}>Contact</a></li>
+            <li><a href="#home" onClick={handleNavClick}>Home</a></li>
+            <li><a href="#about" onClick={handleNavClick}>About</a></li>
+            <li><a href="#speaking" onClick={handleNavClick}>Speaking</a></li>
+            <li><a href="#publications" onClick={handleNavClick}>Publications</a></li>
+            <li><a href="#books" onClick={handleNavClick}>Books</a></li>
+            <li><a href="#contact" onClick={handleNavClick}>Contact</a></li>
           </ul>
         </div>
       </nav>
 
-      {/* Overlay for mobile menu */}
-      {menuOpen && <div className="overlay" onClick={() => setMenuOpen(false)}></div>}
+      {menuOpen && <div className="overlay" onClick={toggleMenu}></div>}
 
-      {/* Main Content */}
       <main className="main-content">
         {/* Hero Section */}
         <section id="home" className="hero-section">
@@ -89,7 +89,7 @@ function App() {
           </div>
         </section>
 
-        {/* Research Excellence Section */}
+        {/* Research Excellence */}
         <section className="featured-section" id="featured">
           <h2 className="section-title">Research Excellence</h2>
           <p className="section-subtitle">
@@ -97,17 +97,17 @@ function App() {
           </p>
           <div className="featured-grid">
             <div className="featured-card">
-              <i className="bi bi-cpu featured-icon"></i>
+              <div className="featured-icon">💻</div>
               <h3>AI Research & Development</h3>
               <p>Leading innovative research in machine learning applications across healthcare, blockchain security, and emerging technologies with published work in peer-reviewed journals.</p>
             </div>
             <div className="featured-card">
-              <i className="bi bi-heart-pulse featured-icon"></i>
+              <div className="featured-icon">🫀</div>
               <h3>Medical AI & Explainability</h3>
               <p>Published research in medical image segmentation and Alzheimer's disease detection using explainable ensemble learning architectures for enhanced diagnostic accuracy.</p>
             </div>
             <div className="featured-card">
-              <i className="bi bi-person-workspace featured-icon"></i>
+              <div className="featured-icon">👨‍💼</div>
               <h3>Tech Career Strategy & Education</h3>
               <p>Author of "Career Path in Tech" and advocate empowering professionals through strategic career guidance, accessible education, and frameworks for building thriving careers in technology.</p>
             </div>
@@ -118,7 +118,7 @@ function App() {
         <section id="about" className="about-section">
           <div className="about-container">
             <div className="about-image-wrapper">
-              <img src="/images/Opeyemi_1C.PNG" alt="Opeyemi Taiwo Adeniran Portrait" className="about-image" />
+              <img src="/images/Opeyemi_1C.PNG" alt="Opeyemi Taiwo Adeniran" className="about-image" />
             </div>
             <div className="about-details">
               <h2>About Me</h2>
@@ -136,17 +136,17 @@ function App() {
             </div>
           </div>
 
-          {/* Bio and Headshot Links */}
+          {/* Bio Links */}
           <div className="link-cards-container bio-links">
             <div className="link-card">
-              <i className="bi bi-file-text"></i>
+              <div className="link-icon">📄</div>
               <p>Long Bio</p>
               <a href="https://docs.google.com/document/d/1fwHGUdVhgyZ8MSyUjcHT28i4tYdfvFBFHyClC0E68Gc/edit" target="_blank" rel="noopener noreferrer">
                 Download Long Bio
               </a>
             </div>
             <div className="link-card">
-              <i className="bi bi-camera"></i>
+              <div className="link-icon">📸</div>
               <p>Headshot</p>
               <a href="https://drive.google.com/drive/folders/1Ajy_vh_t_8VmQUljrs_lzGMeUv8GkJLC?usp=sharing" target="_blank" rel="noopener noreferrer">
                 Download
@@ -163,13 +163,13 @@ function App() {
                 <p>A student-led conference inspiring students through tech talks, research symposium, and panel discussions.</p>
                 <div className="org-links">
                   <a href="https://www.morgantechfest.com/" target="_blank" rel="noopener noreferrer" className="org-link">
-                    <i className="bi bi-globe"></i> Website
+                    🌐 Website
                   </a>
                   <a href="https://www.instagram.com/morgantechfest/" target="_blank" rel="noopener noreferrer" className="org-link">
-                    <i className="bi bi-instagram"></i> Instagram
+                    📷 Instagram
                   </a>
                   <a href="https://medium.com/@morgantechfest" target="_blank" rel="noopener noreferrer" className="org-link">
-                    <i className="bi bi-medium"></i> Medium
+                    📝 Medium
                   </a>
                 </div>
               </div>
@@ -178,13 +178,13 @@ function App() {
                 <p>A faith-based nonprofit organization empowering individuals through spiritual growth and community support.</p>
                 <div className="org-links">
                   <a href="https://favoredonline.com/" target="_blank" rel="noopener noreferrer" className="org-link">
-                    <i className="bi bi-globe"></i> Website
+                    🌐 Website
                   </a>
                   <a href="https://www.instagram.com/favoredonline/" target="_blank" rel="noopener noreferrer" className="org-link">
-                    <i className="bi bi-instagram"></i> Instagram
+                    📷 Instagram
                   </a>
                   <a href="https://medium.com/@opefavored" target="_blank" rel="noopener noreferrer" className="org-link">
-                    <i className="bi bi-medium"></i> Medium
+                    📝 Medium
                   </a>
                 </div>
               </div>
@@ -192,10 +192,7 @@ function App() {
 
             {/* Leadership Positions */}
             <div className="leadership-positions">
-              <h3>
-                <i className="bi bi-award"></i>
-                Past Leadership & Non-profit Positions
-              </h3>
+              <h3>🏆 Past Leadership & Non-profit Positions</h3>
               <p>
                 Throughout my journey in technology and community building, I have held various leadership positions that have 
                 contributed to my growth and the global tech community:
@@ -222,9 +219,9 @@ function App() {
           </div>
         </section>
 
-        {/* Speaking Section */}
+        {/* Speaking */}
         <section id="speaking" className="speaking-section">
-          <i className="bi bi-mic-fill speaking-icon"></i>
+          <div className="speaking-icon">🎤</div>
           <h2 className="section-title">Speaking Engagements</h2>
           <p className="section-subtitle">Sharing insights on AI, technology, and innovation at conferences and events worldwide</p>
           <a href="https://drive.google.com/drive/folders/1HKJXbyr7cbsnTj4c12i8Qb0GJVWym31f?usp=sharing" target="_blank" rel="noopener noreferrer" className="speaking-link-button">
@@ -232,7 +229,7 @@ function App() {
           </a>
         </section>
 
-        {/* Publications Section */}
+        {/* Publications */}
         <section id="publications" className="publications-section">
           <h2 className="section-title">Recent Publications</h2>
           <p className="section-subtitle">
@@ -240,7 +237,7 @@ function App() {
           </p>
           <div className="publications-container">
             <div className="publication-card">
-              <i className="bi bi-file-earmark-medical"></i>
+              <div className="publication-icon">🏥</div>
               <h3>Early Detection of Alzheimer's Disease Using an Ensemble of Diverse Convolutional Neural Networks and Vision Transformer</h3>
               <p>
                 Pioneering research that combines cutting-edge AI techniques to detect Alzheimer's disease in its earliest stages, 
@@ -248,12 +245,12 @@ function App() {
               </p>
             </div>
             <div className="publication-card">
-              <i className="bi bi-brain"></i>
+              <div className="publication-icon">🧠</div>
               <h3>Explainable MRI-Based Ensemble Learnable Architecture for Alzheimer's Disease Detection</h3>
               <p>Novel ensemble learning approach for early Alzheimer's detection with interpretable AI mechanisms.</p>
             </div>
             <div className="publication-card">
-              <i className="bi bi-shield-check"></i>
+              <div className="publication-icon">🛡️</div>
               <h3>SmartPattern: A Machine Learning Framework for Detecting Reentrancy Vulnerabilities in Blockchain Smart Contracts</h3>
               <p>Advanced ML framework for automated detection of security vulnerabilities in blockchain smart contracts.</p>
             </div>
@@ -275,23 +272,19 @@ function App() {
             from leading practitioners.
           </p>
 
-          {/* Book Card with Slider */}
+          {/* Book Card */}
           <div className="book-card">
             <div className="book-image">
               <div className="book-slider" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
                 {bookImages.map((img, index) => (
                   <div key={index} className="book-slide">
-                    <img src={img} alt={`Career Path in Tech - Image ${index + 1}`} />
+                    <img src={img} alt={`Career Path in Tech - ${index + 1}`} />
                   </div>
                 ))}
               </div>
 
-              <button className="slider-arrow prev" onClick={() => moveSlide(-1)}>
-                <i className="bi bi-chevron-left"></i>
-              </button>
-              <button className="slider-arrow next" onClick={() => moveSlide(1)}>
-                <i className="bi bi-chevron-right"></i>
-              </button>
+              <button className="slider-arrow prev" onClick={() => moveSlide(-1)}>‹</button>
+              <button className="slider-arrow next" onClick={() => moveSlide(1)}>›</button>
 
               <div className="slider-dots">
                 {bookImages.map((_, index) => (
@@ -317,7 +310,7 @@ function App() {
             </div>
           </div>
 
-          {/* Features Section */}
+          {/* Features */}
           <div className="features-section-wrapper">
             <h2 className="section-title">What You'll Learn</h2>
             <p className="section-subtitle">
@@ -325,32 +318,32 @@ function App() {
             </p>
             <div className="features-container">
               <div className="feature-card">
-                <div className="feature-icon"><i className="bi bi-compass"></i></div>
+                <div className="feature-icon">🧭</div>
                 <h3>Finding Your Purpose & Niche</h3>
                 <p>Discover your unique path at the intersection of purpose, passion, preference, and proficiency using the Four Pillars Framework.</p>
               </div>
               <div className="feature-card">
-                <div className="feature-icon"><i className="bi bi-bullseye"></i></div>
+                <div className="feature-icon">🎯</div>
                 <h3>The Four Pillars Framework</h3>
                 <p>Master the strategic framework that aligns your purpose, passion, preference, and proficiency to find your ideal career path in technology.</p>
               </div>
               <div className="feature-card">
-                <div className="feature-icon"><i className="bi bi-diagram-3"></i></div>
+                <div className="feature-icon">📊</div>
                 <h3>Strategic Career Planning</h3>
                 <p>Understand market dynamics, career trajectories, and how to position yourself in high-value, sustainable technology roles.</p>
               </div>
               <div className="feature-card">
-                <div className="feature-icon"><i className="bi bi-trophy"></i></div>
+                <div className="feature-icon">🏆</div>
                 <h3>Path to Mastery</h3>
                 <p>Master deliberate practice, continuous learning, and the strategies that transform beginners into recognized experts.</p>
               </div>
               <div className="feature-card">
-                <div className="feature-icon"><i className="bi bi-robot"></i></div>
+                <div className="feature-icon">🤖</div>
                 <h3>AI Career Pathways</h3>
                 <p>Navigate the AI revolution with detailed guidance on technical and non-technical AI roles, learning paths, and future-proofing strategies.</p>
               </div>
               <div className="feature-card">
-                <div className="feature-icon"><i className="bi bi-three-dots"></i></div>
+                <div className="feature-icon">✨</div>
                 <h3>And Many More...</h3>
                 <p>Explore comprehensive topics including networking strategies, personal branding, the seven types of technology, employment vs entrepreneurship, entry points into tech, and much more.</p>
               </div>
@@ -358,23 +351,50 @@ function App() {
           </div>
         </section>
 
-        {/* Subscribe Section */}
+        {/* Subscribe */}
         <section id="subscribe" className="subscribe-section">
-          <SubscribeForm />
+          <div className="subscribe-form">
+            <h3>Be the First to Know</h3>
+            <p>Subscribe to receive updates about new book releases, exclusive career insights, and special offers.</p>
+            <form 
+              action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScWCycwRNkzJPva2dXtos72C41pW2bul1D1z3k9uHWAujG4wA/formResponse" 
+              method="POST" 
+              onSubmit={handleSubmit}
+            >
+              <div className="form-group">
+                <label htmlFor="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="entry.708295245"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Your email address"
+                  required
+                />
+              </div>
+              <button type="submit" className="submit-btn">Subscribe</button>
+            </form>
+            {showSuccess && (
+              <div className="success-message">
+                Thank you for subscribing! You'll be among the first to know about new releases and career resources.
+              </div>
+            )}
+          </div>
         </section>
 
-        {/* Contact Section */}
+        {/* Contact */}
         <section id="contact" className="contact-section">
           <h2 className="section-title">Get in Touch</h2>
           <p className="section-subtitle">Connect with me for inquiries, speaking engagements, and collaborations.</p>
           <div className="link-cards-container">
             <div className="link-card">
-              <i className="bi bi-envelope"></i>
+              <div className="link-icon">✉️</div>
               <p>Email</p>
               <a href="mailto:opeyemitaiwo81@gmail.com">opeyemitaiwo81@gmail.com</a>
             </div>
             <div className="link-card">
-              <i className="bi bi-file-person"></i>
+              <div className="link-icon">📋</div>
               <p>Resume</p>
               <a href="https://opethaiwoh.github.io/opeyemi.github.io/" target="_blank" rel="noopener noreferrer">View Resume</a>
             </div>
@@ -385,74 +405,12 @@ function App() {
       {/* Footer */}
       <footer className="footer">
         <div className="social-links">
-          <a href="https://x.com/opethaiwoh" target="_blank" rel="noopener noreferrer">
-            <i className="bi bi-twitter"></i>
-          </a>
-          <a href="https://instagram.com/stories/opethaiwoh/" target="_blank" rel="noopener noreferrer">
-            <i className="bi bi-instagram"></i>
-          </a>
-          <a href="https://linkedin.com/in/opeyemi-adeniran/" target="_blank" rel="noopener noreferrer">
-            <i className="bi bi-linkedin"></i>
-          </a>
+          <a href="https://x.com/opethaiwoh" target="_blank" rel="noopener noreferrer">𝕏</a>
+          <a href="https://instagram.com/stories/opethaiwoh/" target="_blank" rel="noopener noreferrer">📷</a>
+          <a href="https://linkedin.com/in/opeyemi-adeniran/" target="_blank" rel="noopener noreferrer">💼</a>
         </div>
         <p>© 2025 Opeyemi Taiwo Adeniran. All Rights Reserved.</p>
       </footer>
-    </div>
-  );
-}
-
-// Subscribe Form Component
-function SubscribeForm() {
-  const [formData, setFormData] = useState({ email: '' });
-  const [showSuccess, setShowSuccess] = useState(false);
-
-  const handleChange = (e) => {
-    setFormData({ email: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Submit to Google Form
-    const form = e.target;
-    fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      mode: 'no-cors'
-    }).then(() => {
-      setShowSuccess(true);
-      setFormData({ email: '' });
-      setTimeout(() => setShowSuccess(false), 5000);
-    });
-  };
-
-  return (
-    <div className="subscribe-form">
-      <h3>Be the First to Know</h3>
-      <p>Subscribe to receive updates about new book releases, exclusive career insights, and special offers.</p>
-      <form 
-        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScWCycwRNkzJPva2dXtos72C41pW2bul1D1z3k9uHWAujG4wA/formResponse" 
-        method="POST" 
-        onSubmit={handleSubmit}
-      >
-        <div className="form-group">
-          <label htmlFor="email">Email Address</label>
-          <input
-            type="email"
-            id="email"
-            name="entry.708295245"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Your email address"
-            required
-          />
-        </div>
-        <button type="submit" className="submit-btn">Subscribe</button>
-      </form>
-      {showSuccess && (
-        <div className="success-message">
-          Thank you for subscribing! You'll be among the first to know about new releases and career resources.
-        </div>
-      )}
     </div>
   );
 }
