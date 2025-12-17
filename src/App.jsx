@@ -287,7 +287,6 @@ function App() {
                 <p>Navigate the AI revolution with detailed guidance on technical and non-technical AI roles, learning paths, and future-proofing strategies.</p>
               </div>
               <div className="feature-card">
-                <div className="feature-icon">✨</div>
                 <h3>And Many More...</h3>
                 <p>Explore comprehensive topics including networking strategies, personal branding, the seven types of technology, employment vs entrepreneurship, entry points into tech, and much more.</p>
               </div>
