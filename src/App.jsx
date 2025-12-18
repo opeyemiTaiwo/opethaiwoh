@@ -158,36 +158,36 @@ function App() {
               </div>
             </div>
           </div>
-        </section>
 
-            {/* Leadership Positions */}
-            <div className="leadership-positions">
-              <h3>Past Leadership & Non-profit Positions</h3>
-              <p>
-                Throughout my journey in technology and community building, I have held various leadership positions that have 
-                contributed to my growth and the global tech community:
-              </p>
-              <div className="position-list">
-                <div className="position-item">
-                  <span className="position-title">Google Women Tech Makers Ambassador</span>
-                  <span className="position-year">2022</span>
-                </div>
-                <div className="position-item">
-                  <span className="position-title">Global AI Hub Community Lead</span>
-                  <span className="position-year">2021-2023</span>
-                </div>
-                <div className="position-item">
-                  <span className="position-title">Omdena Lagos Nigeria, Chapter Lead</span>
-                  <span className="position-year">2021-2023</span>
-                </div>
+          {/* Leadership Positions */}
+          <div className="leadership-positions">
+            <h3>Past Leadership & Non-profit Positions</h3>
+            <p>
+              Throughout my journey in technology and community building, I have held various leadership positions that have 
+              contributed to my growth and the global tech community:
+            </p>
+            <div className="position-list">
+              <div className="position-item">
+                <span className="position-title">Google Women Tech Makers Ambassador</span>
+                <span className="position-year">2022</span>
               </div>
-              <p className="leadership-note">
-                These leadership roles have helped shape my experience in community building, empowering women in technology, 
-                and connecting global tech talents.
-              </p>
+              <div className="position-item">
+                <span className="position-title">Global AI Hub Community Lead</span>
+                <span className="position-year">2021-2023</span>
+              </div>
+              <div className="position-item">
+                <span className="position-title">Omdena Lagos Nigeria, Chapter Lead</span>
+                <span className="position-year">2021-2023</span>
+              </div>
             </div>
+            <p className="leadership-note">
+              These leadership roles have helped shape my experience in community building, empowering women in technology, 
+              and connecting global tech talents.
+            </p>
           </div>
         </section>
+
+          
 
         {/* Speaking */}
         <section id="speaking" className="speaking-section">
