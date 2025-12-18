@@ -89,12 +89,9 @@ function App() {
           </div>
         </section>
 
-        {/* About Section */}
+{/* About Section */}
         <section id="about" className="about-section">
           <div className="about-container">
-            <div className="about-image-wrapper">
-              <img src="/images/Opeyemi_1C.PNG" alt="Opeyemi Taiwo Adeniran" className="about-image" />
-            </div>
             <div className="about-details">
               <h2>About Me</h2>
               <p>
@@ -110,7 +107,6 @@ function App() {
               </p>
             </div>
           </div>
-
           {/* Bio Links */}
           <div className="link-cards-container bio-links">
             <div className="link-card">
@@ -126,7 +122,6 @@ function App() {
               </a>
             </div>
           </div>
-
           {/* Organizations */}
           <div className="organizations">
             <h2 className="section-title">Founded Organizations</h2>
@@ -162,6 +157,8 @@ function App() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
 
             {/* Leadership Positions */}
             <div className="leadership-positions">
