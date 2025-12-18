@@ -243,7 +243,7 @@ function App() {
           {/* Book Card - Single Image Display */}
           <div className="book-card">
             <div className="book-image">
-              <img src="/images/bk-pr.png" alt="From Prompt to Website - Build a One-Page React App with Vite" />
+              <img src="/images/bk-pr.png" alt="From Prompt to Website - Build a One-Page React App with Vite" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
             </div>
             <div className="book-content">
               <h3 className="book-title">From Prompt to Website: Build a One-Page React App with Vite</h3>
@@ -258,7 +258,7 @@ function App() {
                 rel="noopener noreferrer"
                 className="book-status-link"
               >
-                <span className="book-status">Get Early Access — Register Now</span>
+                <span className="book-status">Get the Book Now</span>
               </a>
             </div>
           </div>
@@ -295,38 +295,6 @@ function App() {
                 <p>Complete the full development lifecycle by deploying your application and making it accessible to users worldwide.</p>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Subscribe */}
-        <section id="subscribe" className="subscribe-section">
-          <div className="subscribe-form">
-            <h3>Get Updates & Bonus Content</h3>
-            <p>Subscribe to receive updates about the book, exclusive web development tips, and AI-assisted coding resources.</p>
-            <form 
-              action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScWCycwRNkzJPva2dXtos72C41pW2bul1D1z3k9uHWAujG4wA/formResponse" 
-              method="POST" 
-              onSubmit={handleSubmit}
-            >
-              <div className="form-group">
-                <label htmlFor="email">Email Address</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="entry.708295245"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Your email address"
-                  required
-                />
-              </div>
-              <button type="submit" className="submit-btn">Subscribe</button>
-            </form>
-            {showSuccess && (
-              <div className="success-message">
-                Thank you for subscribing! You'll receive updates about the book and exclusive web development resources.
-              </div>
-            )}
           </div>
         </section>
 
