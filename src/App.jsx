@@ -148,7 +148,7 @@ function App() {
               </div>
               <div className="org-item">
                 <h3>Favored Online</h3>
-                <p>A faith-based nonprofit organization empowering individuals through spiritual growth and community support.</p>
+                <p>Turn learning into real-world tech success with hands-on projects and AI-powered career recommendations.</p>
                 <div className="org-links">
                   <a href="https://favoredonline.com/" target="_blank" rel="noopener noreferrer" className="org-link">
                     🌐 Website
