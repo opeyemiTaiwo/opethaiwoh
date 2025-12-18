@@ -230,8 +230,8 @@ function App() {
             </a>
           </div>
         </section>
-
-        {/* Books Section */}
+        
+{/* Books Section */}
         <section id="books" className="books-section">
           <h2 className="section-title">From Prompt to Website</h2>
           <h3 className="section-subtitle">Build a One-Page React App with Vite</h3>
@@ -243,7 +243,7 @@ function App() {
           {/* Book Card - Single Image Display */}
           <div className="book-card">
             <div className="book-image">
-              <img src="/images/book.png" alt="From Prompt to Website - Build a One-Page React App with Vite" />
+              <img src="/images/bk-pr.png" alt="From Prompt to Website - Build a One-Page React App with Vite" />
             </div>
             <div className="book-content">
               <h3 className="book-title">From Prompt to Website: Build a One-Page React App with Vite</h3>
@@ -329,8 +329,6 @@ function App() {
             )}
           </div>
         </section>
-
-    
 
         {/* Contact */}
         <section id="contact" className="contact-section">
