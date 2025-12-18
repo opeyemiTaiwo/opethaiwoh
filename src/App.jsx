@@ -233,28 +233,32 @@ function App() {
 
         {/* Books Section */}
         <section id="books" className="books-section">
-          <h2 className="section-title">Career Path in Tech</h2>
-          <h3 className="section-subtitle">A Comprehensive Guide for the AI Age</h3>
+          <h2 className="section-title">From Prompt to Website</h2>
+          <h3 className="section-subtitle">Build a One-Page React App with Vite</h3>
           <p className="section-description">
-            Your essential roadmap to building a thriving career in technology, written by a tech career strategist 
-            and AI research engineer with extensive experience in professional development and industry insights 
-            from leading practitioners.
+            A beginner's guide to building modern websites with AI prompts. Learn how to leverage AI tools to create, 
+            deploy, and maintain professional web applications—even if you're just starting your coding journey.
           </p>
 
           {/* Book Card - Single Image Display */}
           <div className="book-card">
             <div className="book-image">
-              <img src="/images/Full-nw.png" alt="Career Path in Tech" />
+              <img src="/images/book.png" alt="From Prompt to Website - Build a One-Page React App with Vite" />
             </div>
             <div className="book-content">
-              <h3 className="book-title">Career Path in Tech: A Comprehensive Guide for the AI Age</h3>
+              <h3 className="book-title">From Prompt to Website: Build a One-Page React App with Vite</h3>
               <p className="book-description">
-                Navigate the technology career landscape with confidence. This comprehensive guide covers finding 
-                your purpose, building demonstrable skills, strategic networking, and positioning yourself for success 
-                in the rapidly evolving tech industry.
+                A beginner's guide to building modern websites with AI prompts. Master the complete workflow from 
+                using AI to generate code, to hosting your website live on GitHub, troubleshooting issues, and 
+                deploying to production—all explained in clear, accessible steps.
               </p>
-              <a href="#subscribe" className="book-status-link">
-                <span className="book-status">Get Early Access — Be the First to Know</span>
+              <a 
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdZPxDlum2WU3KiSf7cNeKDlqrfToB7uMwGHqCpfq1x790hcw/viewform?usp=sharing&ouid=115645393602240685899" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="book-status-link"
+              >
+                <span className="book-status">Get Early Access — Register Now</span>
               </a>
             </div>
           </div>
@@ -263,32 +267,32 @@ function App() {
           <div className="features-section-wrapper">
             <h2 className="section-title">What You'll Learn</h2>
             <p className="section-subtitle">
-              Strategic insights and practical frameworks to build a successful, fulfilling career in technology.
+              Everything you need to build and deploy modern web applications using AI-assisted development.
             </p>
             <div className="features-container">
               <div className="feature-card">
-                <h3>Finding Your Purpose & Niche</h3>
-                <p>Discover your unique path at the intersection of purpose, passion, preference, and proficiency using the Four Pillars Framework.</p>
+                <h3>How to Host a Website on GitHub</h3>
+                <p>Learn the fundamentals of version control and how to host your website for free using GitHub Pages.</p>
               </div>
               <div className="feature-card">
-                <h3>The Four Pillars Framework</h3>
-                <p>Master the strategic framework that aligns your purpose, passion, preference, and proficiency to find your ideal career path in technology.</p>
+                <h3>Building Your Web Application Using React and Vite</h3>
+                <p>Master modern web development with React and Vite to create fast, responsive single-page applications.</p>
               </div>
               <div className="feature-card">
-                <h3>Strategic Career Planning</h3>
-                <p>Understand market dynamics, career trajectories, and how to position yourself in high-value, sustainable technology roles.</p>
+                <h3>Using AI Prompts to Create a Stunning, Responsive Website</h3>
+                <p>Harness the power of AI tools to generate clean, professional code and accelerate your development process.</p>
               </div>
               <div className="feature-card">
-                <h3>Path to Mastery</h3>
-                <p>Master deliberate practice, continuous learning, and the strategies that transform beginners into recognized experts.</p>
+                <h3>Troubleshooting Your Website with AI Prompts</h3>
+                <p>Learn effective debugging strategies and how to use AI assistants to identify and fix common issues quickly.</p>
               </div>
               <div className="feature-card">
-                <h3>AI Career Pathways</h3>
-                <p>Navigate the AI revolution with detailed guidance on technical and non-technical AI roles, learning paths, and future-proofing strategies.</p>
+                <h3>Connecting Your Website to a Live Server</h3>
+                <p>Understand deployment workflows and connect your local development environment to production servers.</p>
               </div>
               <div className="feature-card">
-                <h3>And Many More...</h3>
-                <p>Explore comprehensive topics including networking strategies, personal branding, the seven types of technology, employment vs entrepreneurship, entry points into tech, and much more.</p>
+                <h3>Deploy Your Application from Development to Production</h3>
+                <p>Complete the full development lifecycle by deploying your application and making it accessible to users worldwide.</p>
               </div>
             </div>
           </div>
@@ -297,8 +301,8 @@ function App() {
         {/* Subscribe */}
         <section id="subscribe" className="subscribe-section">
           <div className="subscribe-form">
-            <h3>Be the First to Know</h3>
-            <p>Subscribe to receive updates about new book releases, exclusive career insights, and special offers.</p>
+            <h3>Get Updates & Bonus Content</h3>
+            <p>Subscribe to receive updates about the book, exclusive web development tips, and AI-assisted coding resources.</p>
             <form 
               action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScWCycwRNkzJPva2dXtos72C41pW2bul1D1z3k9uHWAujG4wA/formResponse" 
               method="POST" 
@@ -320,11 +324,13 @@ function App() {
             </form>
             {showSuccess && (
               <div className="success-message">
-                Thank you for subscribing! You'll be among the first to know about new releases and career resources.
+                Thank you for subscribing! You'll receive updates about the book and exclusive web development resources.
               </div>
             )}
           </div>
         </section>
+
+    
 
         {/* Contact */}
         <section id="contact" className="contact-section">
