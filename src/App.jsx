@@ -87,6 +87,11 @@ function App() {
               <h3>Tech Career Strategy & Education</h3>
               <p>Author of "Career Path in Tech" and advocate empowering professionals through strategic career guidance, accessible education, and frameworks for building thriving careers in technology.</p>
             </div>
+            <div className="publications-cta">
+            <a href="https://scholar.google.com/citations?user=Krnac-4AAAAJ&hl" target="_blank" rel="noopener noreferrer" className="cta-button">
+              View All Publications
+            </a>
+          </div>
           </div>
         </section>
 
@@ -206,11 +211,7 @@ function App() {
               <p>Advanced ML framework for automated detection of security vulnerabilities in blockchain smart contracts.</p>
             </div>
           </div>
-          <div className="publications-cta">
-            <a href="https://scholar.google.com/citations?user=Krnac-4AAAAJ&hl" target="_blank" rel="noopener noreferrer" className="cta-button">
-              View All Publications
-            </a>
-          </div>
+          
         </section>
         
         {/* Books Section */}
