@@ -145,15 +145,13 @@ function App() {
            {/* Bio Links */}
           <div className="link-cards-container bio-links">
             <div className="link-card">
-              <p>Long Bio</p>
-             <a href="https://drive.google.com/drive/folders/1HKJXbyr7cbsnTj4c12i8Qb0GJVWym31f?usp=sharing" target="_blank" rel="noopener noreferrer" className="speaking-link-button">
+             <a href="https://drive.google.com/drive/folders/1HKJXbyr7cbsnTj4c12i8Qb0GJVWym31f?usp=sharing" target="_blank" rel="noopener noreferrer">
               View Past Speaking Engagements
               </a>
             </div>
             <div className="link-card">
-              <p>Headshot</p>
               <a href="https://drive.google.com/drive/folders/1Ajy_vh_t_8VmQUljrs_lzGMeUv8GkJLC?usp=sharing" target="_blank" rel="noopener noreferrer">
-                Download
+                Download Headshot
               </a>
             </div>
           </div>
