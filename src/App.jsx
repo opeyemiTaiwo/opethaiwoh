@@ -192,15 +192,15 @@ function App() {
           </p>
           <div className="publications-container">
             <div className="publication-card">
-              <h3>Early Detection of Alzheimer's Disease Using an Ensemble of Diverse Convolutional Neural Networks and Vision Transformer</h3>
+              <h3>Initial Impact of Evidence-Based and Experiment-Focused Teaching Approach in a Computer Architecture Course in Computer Science</h3>
               <p>
-                Pioneering research that combines cutting-edge AI techniques to detect Alzheimer's disease in its earliest stages, 
-                potentially enabling earlier intervention and treatment.
+                This research examines Digital Logic and Computer Architecture as foundational areas of Computer Science for understanding hardware and software interaction.
               </p>
             </div>
             <div className="publication-card">
               <h3>Explainable MRI-Based Ensemble Learnable Architecture for Alzheimer's Disease Detection</h3>
-              <p>Novel ensemble learning approach for early Alzheimer's detection with interpretable AI mechanisms.</p>
+              <p> Pioneering research that combines cutting-edge AI techniques to detect Alzheimer's disease in its earliest stages, 
+                potentially enabling earlier intervention and treatment.</p>
             </div>
             <div className="publication-card">
               <h3>SmartPattern: A Machine Learning Framework for Detecting Reentrancy Vulnerabilities in Blockchain Smart Contracts</h3>
