@@ -161,9 +161,6 @@ function App() {
         <section id="books" className="books-section">
           <h2 className="section-title">Career Path in Tech</h2>
           <h3 className="section-subtitle">A Beginner's Guide to Building a Tech Career in the Age of AI</h3>
-          <p className="section-description">
-           In the age of AI and rapid digital transformation, building a successful tech career requires more than technical skills.
-          </p>
      
           {/* Book Card - Single Image Display */}
           <div className="book-card">
@@ -177,7 +174,7 @@ function App() {
             Whether you're entering tech for the first time, transitioning from another field, or pivoting within the industry, this guide provides the framework you need to navigate your career with confidence.
               </p>
               <a 
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdZPxDlum2WU3KiSf7cNeKDlqrfToB7uMwGHqCpfq1x790hcw/viewform?usp=sharing&ouid=115645393602240685899" 
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfiZ1HkHsbEGENE6xM2rayzO9R7Xfi2BqEsyltfy1lFnrjk2g/viewform?usp=publish-editor" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="book-status-link"
