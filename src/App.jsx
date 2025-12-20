@@ -157,6 +157,33 @@ function App() {
           </div>
         </section>
 
+       {/* Books Section */}
+        <section id="books" className="books-section">
+     
+          {/* Book Card - Single Image Display */}
+          <div className="book-card">
+            <div className="book-image">
+              <img src="/images/bk-pr.png" alt="From Prompt to Website - Build a One-Page React App with Vite" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
+            </div>
+            <div className="book-content">
+              <h3 className="book-title">From Prompt to Website: Build a One-Page React App with Vite</h3>
+              <p className="book-description">
+                A beginner's guide to building modern websites with AI prompts. Master the complete workflow from 
+                using AI to generate code, to hosting your website live on GitHub, troubleshooting issues, and 
+                deploying to production—all explained in clear, accessible steps.
+              </p>
+              <a 
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdZPxDlum2WU3KiSf7cNeKDlqrfToB7uMwGHqCpfq1x790hcw/viewform?usp=sharing&ouid=115645393602240685899" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="book-status-link"
+              >
+                <span className="book-status">Get the Book Now</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* Publications */}
         <section id="publications" className="publications-section">
           <h2 className="section-title">Recent Publications</h2>
@@ -187,34 +214,6 @@ function App() {
           </div>
         </section>
         
-        {/* Books Section */}
-        <section id="books" className="books-section">
-     
-
-          {/* Book Card - Single Image Display */}
-          <div className="book-card">
-            <div className="book-image">
-              <img src="/images/bk-pr.png" alt="From Prompt to Website - Build a One-Page React App with Vite" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
-            </div>
-            <div className="book-content">
-              <h3 className="book-title">From Prompt to Website: Build a One-Page React App with Vite</h3>
-              <p className="book-description">
-                A beginner's guide to building modern websites with AI prompts. Master the complete workflow from 
-                using AI to generate code, to hosting your website live on GitHub, troubleshooting issues, and 
-                deploying to production—all explained in clear, accessible steps.
-              </p>
-              <a 
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdZPxDlum2WU3KiSf7cNeKDlqrfToB7uMwGHqCpfq1x790hcw/viewform?usp=sharing&ouid=115645393602240685899" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="book-status-link"
-              >
-                <span className="book-status">Get the Book Now</span>
-              </a>
-            </div>
-          </div>
-        </section>
-
         {/* Contact */}
         <section id="contact" className="contact-section">
           <h2 className="section-title">Get in Touch</h2>
