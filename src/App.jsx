@@ -60,8 +60,9 @@ function App() {
             <img src="/images/Opeyemi_1C.PNG" alt="Opeyemi Taiwo Adeniran" className="hero-image" />
             <h1 className="hero-title">AI Research Engineer & Author</h1>
             <p className="hero-subtitle">
-              Pioneering cutting-edge research in artificial intelligence, empowering professionals to harness AI technologies, 
-              and guiding aspiring tech professionals to build thriving careers in the rapidly evolving technology landscape.
+             Opeyemi Adeniran is a tech career strategist, researcher, and author who empowers aspiring tech professionals 
+                to navigate and thrive in the technology industry. Through her Career Path in Tech training series and professional 
+                programs, she has impacted thousands of individuals worldwide.
             </p>
             <a href="#books" className="cta-button">Explore My Books & Resources</a>
           </div>
@@ -89,39 +90,8 @@ function App() {
           </div>
         </section>
 
-{/* About Section */}
-        <section id="about" className="about-section">
-          <div className="about-container">
-            <div className="about-details">
-              <h2>About Me</h2>
-              <p>
-                Opeyemi Adeniran is a tech career strategist, researcher, and author who empowers aspiring tech professionals 
-                to navigate and thrive in the technology industry. Through her Career Path in Tech training series and professional 
-                programs, she has impacted thousands of individuals worldwide.
-              </p>
-              <p>
-                As a researcher, Opeyemi pioneers advanced applications of deep learning and vision transformer technologies in 
-                early Alzheimer's detection, and also conducts pioneering research using AI in smart contracts and object tracking, 
-                combining her technical expertise with strategic career guidance to provide comprehensive roadmaps for building 
-                successful tech careers.
-              </p>
-            </div>
-          </div>
-          {/* Bio Links */}
-          <div className="link-cards-container bio-links">
-            <div className="link-card">
-              <p>Long Bio</p>
-              <a href="https://docs.google.com/document/d/1fwHGUdVhgyZ8MSyUjcHT28i4tYdfvFBFHyClC0E68Gc/edit" target="_blank" rel="noopener noreferrer">
-                Download Long Bio
-              </a>
-            </div>
-            <div className="link-card">
-              <p>Headshot</p>
-              <a href="https://drive.google.com/drive/folders/1Ajy_vh_t_8VmQUljrs_lzGMeUv8GkJLC?usp=sharing" target="_blank" rel="noopener noreferrer">
-                Download
-              </a>
-            </div>
-          </div>
+         
+          
           {/* Organizations */}
           <div className="organizations">
             <h2 className="section-title">Founded Organizations</h2>
@@ -192,10 +162,27 @@ function App() {
         {/* Speaking */}
         <section id="speaking" className="speaking-section">
           <h2 className="section-title">Speaking Engagements</h2>
-          <p className="section-subtitle">Sharing insights on AI, technology, and innovation at conferences and events worldwide</p>
+          <p className="section-subtitle">Sharing insights on AI, technology, and innovation at conferences and events worldwide
+           Pioneering cutting-edge research in artificial intelligence, empowering professionals to harness AI technologies, 
+              and guiding aspiring tech professionals to build thriving careers in the rapidly evolving technology landscape.</p>
           <a href="https://drive.google.com/drive/folders/1HKJXbyr7cbsnTj4c12i8Qb0GJVWym31f?usp=sharing" target="_blank" rel="noopener noreferrer" className="speaking-link-button">
             View Past Speaking Engagements
           </a>
+           {/* Bio Links */}
+          <div className="link-cards-container bio-links">
+            <div className="link-card">
+              <p>Long Bio</p>
+              <a href="https://docs.google.com/document/d/1fwHGUdVhgyZ8MSyUjcHT28i4tYdfvFBFHyClC0E68Gc/edit" target="_blank" rel="noopener noreferrer">
+                Download Long Bio
+              </a>
+            </div>
+            <div className="link-card">
+              <p>Headshot</p>
+              <a href="https://drive.google.com/drive/folders/1Ajy_vh_t_8VmQUljrs_lzGMeUv8GkJLC?usp=sharing" target="_blank" rel="noopener noreferrer">
+                Download
+              </a>
+            </div>
+          </div>
         </section>
 
         {/* Publications */}
