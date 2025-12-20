@@ -246,41 +246,6 @@ function App() {
             </div>
           </div>
 
-          {/* Features */}
-          <div className="features-section-wrapper">
-            <h2 className="section-title">What You'll Learn</h2>
-            <p className="section-subtitle">
-              Everything you need to build and deploy modern web applications using AI-assisted development.
-            </p>
-            <div className="features-container">
-              <div className="feature-card">
-                <h3>How to Host a Website on GitHub</h3>
-                <p>Learn the fundamentals of version control and how to host your website for free using GitHub Pages.</p>
-              </div>
-              <div className="feature-card">
-                <h3>Building Your Web Application Using React and Vite</h3>
-                <p>Master modern web development with React and Vite to create fast, responsive single-page applications.</p>
-              </div>
-              <div className="feature-card">
-                <h3>Using AI Prompts to Create a Stunning, Responsive Website</h3>
-                <p>Harness the power of AI tools to generate clean, professional code and accelerate your development process.</p>
-              </div>
-              <div className="feature-card">
-                <h3>Troubleshooting Your Website with AI Prompts</h3>
-                <p>Learn effective debugging strategies and how to use AI assistants to identify and fix common issues quickly.</p>
-              </div>
-              <div className="feature-card">
-                <h3>Connecting Your Website to a Live Server</h3>
-                <p>Understand deployment workflows and connect your local development environment to production servers.</p>
-              </div>
-              <div className="feature-card">
-                <h3>Deploy Your Application from Development to Production</h3>
-                <p>Complete the full development lifecycle by deploying your application and making it accessible to users worldwide.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Contact */}
         <section id="contact" className="contact-section">
           <h2 className="section-title">Get in Touch</h2>
