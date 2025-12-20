@@ -157,19 +157,25 @@ function App() {
           </div>
         </section>
 
+          {/* Books Section */}
+          <section id="books" className="books-section">
+          <h2 className="section-title">Career Path in Tech</h2>
+          <h3 className="section-subtitle">A Beginner’s Guide to Building a Tech Career in the Age of AI</h3>
+          <p className="section-description">
+           In the age of AI and rapid digital transformation, building a successful tech career requires more than technical skills.
+          </p>
+
        {/* Books Section */}
         <section id="books" className="books-section">
      
           {/* Book Card - Single Image Display */}
           <div className="book-card">
             <div className="book-image">
-              <img src="/images/bk-pr.png" alt="From Prompt to Website - Build a One-Page React App with Vite" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
+              <img src="/images/bk-pr.png" alt="" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
             </div>
             <div className="book-content">
-              <h3 className="book-title">From Prompt to Website: Build a One-Page React App with Vite</h3>
+              <h3 className="book-title">Career Path in Tech</h3>
               <p className="book-description">
-             In the age of AI and rapid digital transformation, building a successful tech career requires more than technical skills. 
-            It demands strategic planning, continuous learning, and a clear understanding of your unique path. 
             Career Path in Tech distils wisdom from leading technology professionals and academics into a comprehensive roadmap for thriving in today's dynamic tech industry. 
             Whether you're entering tech for the first time, transitioning from another field, or pivoting within the industry, this guide provides the framework you need to navigate your career with confidence.
               </p>
