@@ -160,9 +160,9 @@ function App() {
         {/* Speaking */}
         <section id="speaking" className="speaking-section">
           <h2 className="section-title">Speaking Engagements</h2>
-          <p className="section-subtitle">Sharing insights on AI, technology, and innovation at conferences and events worldwide
-           Pioneering cutting-edge research in artificial intelligence, empowering professionals to harness AI technologies, 
-              and guiding aspiring tech professionals to build thriving careers in the rapidly evolving technology landscape.</p>
+          <p className="section-subtitle">Sharing insights on AI, technology, and innovation at conferences and events worldwide, 
+            pioneering cutting-edge research in artificial intelligence, empowering professionals to harness AI technologies, 
+            and guiding aspiring tech professionals to build thriving careers in the rapidly evolving technology landscape.</p>
           <a href="https://drive.google.com/drive/folders/1HKJXbyr7cbsnTj4c12i8Qb0GJVWym31f?usp=sharing" target="_blank" rel="noopener noreferrer" className="speaking-link-button">
             View Past Speaking Engagements
           </a>
