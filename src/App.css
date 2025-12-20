@@ -136,6 +136,12 @@ section {
   margin: 0 auto;
 }
 
+/* Hero section needs full width, not constrained by section base styles */
+section.hero-section {
+  max-width: none;
+  margin: 0;
+}
+
 .section-title {
   font-size: 2.5rem;
   font-weight: 700;
@@ -170,16 +176,22 @@ section {
   text-align: center;
   padding: 100px 30px 80px;
   background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
+  /* Explicitly remove any section-level box styling */
+  max-width: none !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
 }
 
 .hero-content {
   max-width: 800px;
   /* No box styling - content flows naturally on the background */
-  background: none;
-  border: none;
-  padding: 0;
-  box-shadow: none;
-  border-radius: 0;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
 }
 
 .hero-image {
