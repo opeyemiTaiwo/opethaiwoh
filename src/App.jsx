@@ -60,9 +60,9 @@ function App() {
             <img src="/images/Opeyemi_1C.PNG" alt="Opeyemi Taiwo Adeniran" className="hero-image" />
             <h1 className="hero-title">AI Research Engineer & Author</h1>
             <p className="hero-subtitle">
-             Opeyemi Adeniran is a tech career strategist, researcher, and author who empowers aspiring tech professionals 
-                to navigate and thrive in the technology industry. Through her Career Path in Tech training series and professional 
-                programs, she has impacted thousands of individuals worldwide.
+              Opeyemi Taiwo Adeniran is an AI researcher, author, and technology entrepreneur passionate about guiding people into successful careers in tech. 
+              Her work focuses on Explainable Multimodal AI, where she builds intelligent systems that are explainable and interpretable, combining text, images, and video to solve real-world problems.
+              Through her writing and teaching, she is committed to making technology accessible, practical, and impactful.
             </p>
             <a href="#books" className="cta-button">Explore My Books & Resources</a>
           </div>
