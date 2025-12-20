@@ -62,7 +62,7 @@ function App() {
             <p className="hero-subtitle">
               Opeyemi Taiwo Adeniran is an AI researcher, author, and technology entrepreneur passionate about guiding people into successful careers in Tech. 
             </p>
-            <a href="https://docs.google.com/document/d/1fwHGUdVhgyZ8MSyUjcHT28i4tYdfvFBFHyClC0E68Gc/edit" target="_blank" rel="noopener noreferrer">
+            <a href="https://docs.google.com/document/d/1fwHGUdVhgyZ8MSyUjcHT28i4tYdfvFBFHyClC0E68Gc/edit" target="_blank" rel="noopener noreferrer" className="cta-button">
               Learn more about me
             </a>
           </div>
