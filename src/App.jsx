@@ -60,35 +60,11 @@ function App() {
             <img src="/images/Opeyemi_1C.PNG" alt="Opeyemi Taiwo Adeniran" className="hero-image" />
             <h1 className="hero-title">AI Research Engineer & Author</h1>
             <p className="hero-subtitle">
-              Opeyemi Taiwo Adeniran is an AI researcher, author, and technology entrepreneur passionate about guiding people into successful careers in tech. 
-              Her work focuses on Explainable Multimodal AI, where she builds intelligent systems that are explainable and interpretable, combining text, images, and video to solve real-world problems.
-              Through her writing and teaching, she is committed to making technology accessible, practical, and impactful.
+              Opeyemi Taiwo Adeniran is an AI researcher, author, and technology entrepreneur passionate about guiding people into successful careers in Tech. 
             </p>
-            <a href="https://scholar.google.com/citations?user=Krnac-4AAAAJ&hl" target="_blank" rel="noopener noreferrer" className="cta-button">
-              View Publications
+            <a href="https://docs.google.com/document/d/1fwHGUdVhgyZ8MSyUjcHT28i4tYdfvFBFHyClC0E68Gc/edit" target="_blank" rel="noopener noreferrer">
+              Learn more about me
             </a>
-          </div>
-        </section>
-
-        {/* Research Excellence */}
-        <section className="featured-section" id="featured">
-          <h2 className="section-title">Research Excellence</h2>
-          <p className="section-subtitle">
-            Leading innovation in AI research with published work spanning medical diagnostics, blockchain security, and machine learning applications.
-          </p>
-          <div className="featured-grid">
-            <div className="featured-card">
-              <h3>AI Research & Development</h3>
-              <p>Leading innovative research in machine learning applications across healthcare, blockchain security, and emerging technologies with published work in peer-reviewed journals.</p>
-            </div>
-            <div className="featured-card">
-              <h3>Medical AI & Explainability</h3>
-              <p>Published research in medical image segmentation and Alzheimer's disease detection using explainable ensemble learning architectures for enhanced diagnostic accuracy.</p>
-            </div>
-            <div className="featured-card">
-              <h3>Tech Career Strategy & Education</h3>
-              <p>Author of "Career Path in Tech" and advocate empowering professionals through strategic career guidance, accessible education, and frameworks for building thriving careers in technology.</p>
-            </div>
           </div>
         </section>
 
@@ -165,15 +141,13 @@ function App() {
           <p className="section-subtitle">Sharing insights on AI, technology, and innovation at conferences and events worldwide, 
             pioneering cutting-edge research in artificial intelligence, empowering professionals to harness AI technologies, 
             and guiding aspiring tech professionals to build thriving careers in the rapidly evolving technology landscape.</p>
-          <a href="https://drive.google.com/drive/folders/1HKJXbyr7cbsnTj4c12i8Qb0GJVWym31f?usp=sharing" target="_blank" rel="noopener noreferrer" className="speaking-link-button">
-            View Past Speaking Engagements
-          </a>
+          
            {/* Bio Links */}
           <div className="link-cards-container bio-links">
             <div className="link-card">
               <p>Long Bio</p>
-              <a href="https://docs.google.com/document/d/1fwHGUdVhgyZ8MSyUjcHT28i4tYdfvFBFHyClC0E68Gc/edit" target="_blank" rel="noopener noreferrer">
-                Download Long Bio
+             <a href="https://drive.google.com/drive/folders/1HKJXbyr7cbsnTj4c12i8Qb0GJVWym31f?usp=sharing" target="_blank" rel="noopener noreferrer" className="speaking-link-button">
+              View Past Speaking Engagements
               </a>
             </div>
             <div className="link-card">
