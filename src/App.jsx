@@ -168,9 +168,10 @@ function App() {
             <div className="book-content">
               <h3 className="book-title">From Prompt to Website: Build a One-Page React App with Vite</h3>
               <p className="book-description">
-                A beginner's guide to building modern websites with AI prompts. Master the complete workflow from 
-                using AI to generate code, to hosting your website live on GitHub, troubleshooting issues, and 
-                deploying to production—all explained in clear, accessible steps.
+             In the age of AI and rapid digital transformation, building a successful tech career requires more than technical skills. 
+            It demands strategic planning, continuous learning, and a clear understanding of your unique path. 
+            Career Path in Tech distils wisdom from leading technology professionals and academics into a comprehensive roadmap for thriving in today's dynamic tech industry. 
+            Whether you're entering tech for the first time, transitioning from another field, or pivoting within the industry, this guide provides the framework you need to navigate your career with confidence.
               </p>
               <a 
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdZPxDlum2WU3KiSf7cNeKDlqrfToB7uMwGHqCpfq1x790hcw/viewform?usp=sharing&ouid=115645393602240685899" 
