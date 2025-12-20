@@ -90,8 +90,8 @@ function App() {
           </div>
         </section>
 
-         
-          
+        {/* About Section */}
+        <section id="about" className="about-section">
           {/* Organizations */}
           <div className="organizations">
             <h2 className="section-title">Founded Organizations</h2>
@@ -157,8 +157,6 @@ function App() {
           </div>
         </section>
 
-          
-
         {/* Speaking */}
         <section id="speaking" className="speaking-section">
           <h2 className="section-title">Speaking Engagements</h2>
@@ -215,7 +213,7 @@ function App() {
           </div>
         </section>
         
-{/* Books Section */}
+        {/* Books Section */}
         <section id="books" className="books-section">
           <h2 className="section-title">From Prompt to Website</h2>
           <h3 className="section-subtitle">Build a One-Page React App with Vite</h3>
