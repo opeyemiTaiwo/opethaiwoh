@@ -159,7 +159,7 @@ function App() {
 
         {/* Books Section */}
         <section id="books" className="books-section">
-          <h2 className="section-title">Career Path in Tech</h2>
+          <h2 className="section-title">Career Path in Tech: First Edition</h2>
           <h3 className="section-subtitle">A Beginner's Guide to Building a Tech Career in the Age of AI</h3>
      
           {/* Book Card - Single Image Display */}
