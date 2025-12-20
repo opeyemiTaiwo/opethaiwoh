@@ -44,8 +44,8 @@ function App() {
             <li><a href="#home" onClick={handleNavClick}>Home</a></li>
             <li><a href="#about" onClick={handleNavClick}>About</a></li>
             <li><a href="#speaking" onClick={handleNavClick}>Speaking</a></li>
-            <li><a href="#publications" onClick={handleNavClick}>Publications</a></li>
             <li><a href="#books" onClick={handleNavClick}>Books</a></li>
+            <li><a href="#publications" onClick={handleNavClick}>Publications</a></li>
             <li><a href="#contact" onClick={handleNavClick}>Contact</a></li>
           </ul>
         </div>
