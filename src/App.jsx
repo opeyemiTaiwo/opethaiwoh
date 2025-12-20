@@ -191,12 +191,7 @@ function App() {
         
         {/* Books Section */}
         <section id="books" className="books-section">
-          <h2 className="section-title">From Prompt to Website</h2>
-          <h3 className="section-subtitle">Build a One-Page React App with Vite</h3>
-          <p className="section-description">
-            A beginner's guide to building modern websites with AI prompts. Learn how to leverage AI tools to create, 
-            deploy, and maintain professional web applications—even if you're just starting your coding journey.
-          </p>
+     
 
           {/* Book Card - Single Image Display */}
           <div className="book-card">
