@@ -195,7 +195,7 @@ function App() {
             <div className="publication-card">
               <h3>Initial Impact of Evidence-Based and Experiment-Focused Teaching Approach in a Computer Architecture Course in Computer Science</h3>
               <p>
-                This research examines Digital Logic and Computer Architecture as foundational areas of Computer Science for understanding hardware and software interaction.
+              This paper presents the first implementation of an evidence-based, experiment-focused approach to teach digital logic fundamentals for the first time in a Computer Science course.
               </p>
             </div>
             <div className="publication-card">
