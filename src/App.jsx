@@ -64,7 +64,7 @@ function App() {
               Her work focuses on Explainable Multimodal AI, where she builds intelligent systems that are explainable and interpretable, combining text, images, and video to solve real-world problems.
               Through her writing and teaching, she is committed to making technology accessible, practical, and impactful.
             </p>
-            <a href="#books" className="cta-button">Explore My Books & Resources</a>
+            <a href="https://scholar.google.com/citations?user=Krnac-4AAAAJ&hl" target="_blank" rel="noopener noreferrer" className="cta-button">
           </div>
         </section>
 
@@ -87,11 +87,6 @@ function App() {
               <h3>Tech Career Strategy & Education</h3>
               <p>Author of "Career Path in Tech" and advocate empowering professionals through strategic career guidance, accessible education, and frameworks for building thriving careers in technology.</p>
             </div>
-            <div className="publications-cta">
-            <a href="https://scholar.google.com/citations?user=Krnac-4AAAAJ&hl" target="_blank" rel="noopener noreferrer" className="cta-button">
-              View All Publications
-            </a>
-          </div>
           </div>
         </section>
 
