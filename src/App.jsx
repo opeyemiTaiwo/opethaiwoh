@@ -65,6 +65,8 @@ function App() {
               Through her writing and teaching, she is committed to making technology accessible, practical, and impactful.
             </p>
             <a href="https://scholar.google.com/citations?user=Krnac-4AAAAJ&hl" target="_blank" rel="noopener noreferrer" className="cta-button">
+              View Publications
+            </a>
           </div>
         </section>
 
@@ -206,7 +208,11 @@ function App() {
               <p>Advanced ML framework for automated detection of security vulnerabilities in blockchain smart contracts.</p>
             </div>
           </div>
-          
+          <div className="publications-cta">
+            <a href="https://scholar.google.com/citations?user=Krnac-4AAAAJ&hl" target="_blank" rel="noopener noreferrer" className="cta-button">
+              View All Publications
+            </a>
+          </div>
         </section>
         
         {/* Books Section */}
@@ -240,6 +246,7 @@ function App() {
               </a>
             </div>
           </div>
+        </section>
 
         {/* Contact */}
         <section id="contact" className="contact-section">
