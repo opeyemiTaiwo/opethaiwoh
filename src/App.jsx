@@ -174,7 +174,7 @@ function App() {
             Whether you're entering tech for the first time, transitioning from another field, or pivoting within the industry, this guide provides the framework you need to navigate your career with confidence.
               </p>
               <a 
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfiZ1HkHsbEGENE6xM2rayzO9R7Xfi2BqEsyltfy1lFnrjk2g/viewform?usp=publish-editor" 
+                href="https://selar.com/m/opeyemitaiwo" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="book-status-link"
