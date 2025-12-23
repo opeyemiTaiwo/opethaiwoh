@@ -193,9 +193,9 @@ function App() {
           </p>
           <div className="publications-container">
             <div className="publication-card">
-              <h3>Initial Impact of Evidence-Based and Experiment-Focused Teaching Approach in a Computer Architecture Course in Computer Science</h3>
+              <h3>Comparative Evaluation of Prompting Techniques for Forensic Video Analysis Using GPT-4o</h3>
               <p>
-           This research evaluates how different prompting techniques affect LLM performance in forensic analysis.
+          This research evaluates how different prompting techniques affect LLM performance in forensic analysis.
               </p>
             </div>
             <div className="publication-card">
