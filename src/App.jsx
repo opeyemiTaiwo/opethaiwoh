@@ -189,13 +189,13 @@ function App() {
         <section id="publications" className="publications-section">
           <h2 className="section-title">Recent Publications</h2>
           <p className="section-subtitle">
-            Peer-reviewed research spanning medical AI, blockchain security, and machine learning applications
+          Comparative Evaluation of Prompting Techniques for Forensic Video Analysis Using GPT-4o
           </p>
           <div className="publications-container">
             <div className="publication-card">
               <h3>Initial Impact of Evidence-Based and Experiment-Focused Teaching Approach in a Computer Architecture Course in Computer Science</h3>
               <p>
-              This paper presents the first implementation of an evidence-based, experiment-focused approach to teach digital logic fundamentals for the first time in a Computer Science course.
+           This research evaluates how different prompting techniques affect LLM performance in forensic analysis.
               </p>
             </div>
             <div className="publication-card">
@@ -204,8 +204,8 @@ function App() {
                 potentially enabling earlier intervention and treatment.</p>
             </div>
             <div className="publication-card">
-              <h3>SmartPattern: A Machine Learning Framework for Detecting Reentrancy Vulnerabilities in Blockchain Smart Contracts</h3>
-              <p>Advanced ML framework for automated detection of security vulnerabilities in blockchain smart contracts.</p>
+              <h3>Evaluating Prompting Strategies in Multimodal Large Language Models for Human-Aligned Forensic Video Analysis</h3>
+              <p>This study evaluates eight prompting techniques to optimize human-aligned responses in multimodal large language models (MLLMs) for forensic applications.</p>
             </div>
           </div>
           <div className="publications-cta">
