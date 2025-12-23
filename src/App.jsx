@@ -189,7 +189,7 @@ function App() {
         <section id="publications" className="publications-section">
           <h2 className="section-title">Recent Publications</h2>
           <p className="section-subtitle">
-          Comparative Evaluation of Prompting Techniques for Forensic Video Analysis Using GPT-4o
+     Check out my peer-reviewed research on multimodal AI applications in security, forensic analytics, and medical imaging, focused on explainable and interpretable solutions.
           </p>
           <div className="publications-container">
             <div className="publication-card">
