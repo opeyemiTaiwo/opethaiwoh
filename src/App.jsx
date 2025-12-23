@@ -159,19 +159,19 @@ function App() {
 
         {/* Books Section */}
         <section id="books" className="books-section">
-          <h2 className="section-title">Career Path in Tech: First Edition</h2>
-          <h3 className="section-subtitle">A Beginner's Guide to Building a Tech Career in the Age of AI</h3>
+          <h2 className="section-title">AI Business Growth Toolkit</h2>
+          <h3 className="section-subtitle">Strategic Prompts for Business Owners</h3>
      
           {/* Book Card - Single Image Display */}
           <div className="book-card">
             <div className="book-image">
-              <img src="/images/Full-nw.png" alt="Career Path in Tech Book Cover" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
+              <img src="/images/Full-nw.png" alt="AI Business Growth Toolkit" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
             </div>
             <div className="book-content">
-              <h3 className="book-title">Career Path in Tech</h3>
+              <h3 className="book-title">Now Available: AI Business Growth Toolkit</h3>
               <p className="book-description">
-            Career Path in Tech distils wisdom from leading technology professionals and academics into a comprehensive roadmap for thriving in today's dynamic tech industry. 
-            Whether you're entering tech for the first time, transitioning from another field, or pivoting within the industry, this guide provides the framework you need to navigate your career with confidence.
+        AI Business Growth Toolkit distills proven strategies from successful entrepreneurs and business experts into ready-to-use prompts that drive real results. 
+        Whether you're launching your first business, struggling to increase sales, or looking to scale your existing venture, this toolkit provides the exact questions you need to unlock growth with confidence.
               </p>
               <a 
                 href="https://selar.com/m/opeyemitaiwo" 
