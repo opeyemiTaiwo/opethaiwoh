@@ -166,7 +166,7 @@ function App() {
   <div className="book-card">
     <div className="book-image">
       <img 
-        src="/images/frnt.png" 
+        src="/images/bk-cv.png" 
         alt="AI Business Growth Toolkit" 
         style={{ 
           objectFit: 'contain', 
