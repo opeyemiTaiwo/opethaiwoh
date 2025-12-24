@@ -158,32 +158,40 @@ function App() {
         </section>
 
         {/* Books Section */}
-        <section id="books" className="books-section">
-          <h2 className="section-title">AI Business Growth Toolkit</h2>
-          <h3 className="section-subtitle">Strategic Prompts for Business Owners</h3>
-     
-          {/* Book Card - Single Image Display */}
-          <div className="book-card">
-            <div className="book-image">
-              <img src="/images/frnt.png" alt="AI Business Growth Toolkit" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
-            </div>
-            <div className="book-content">
-              <h3 className="book-title">Now Available: AI Business Growth Toolkit</h3>
-              <p className="book-description">
+<section id="books" className="books-section">
+  <h2 className="section-title">AI Business Growth Toolkit</h2>
+  <h3 className="section-subtitle">Strategic Prompts for Business Owners</h3>
+ 
+  {/* Book Card - Single Image Display */}
+  <div className="book-card">
+    <div className="book-image">
+      <img 
+        src="/images/frnt.png" 
+        alt="AI Business Growth Toolkit" 
+        style={{ 
+          objectFit: 'contain', 
+          width: '100%', 
+          height: '100%' 
+        }} 
+      />
+    </div>
+    <div className="book-content">
+      <h3 className="book-title">Now Available: AI Business Growth Toolkit</h3>
+      <p className="book-description">
         AI Business Growth Toolkit distills proven strategies from successful entrepreneurs and business experts into ready-to-use prompts that drive real results. 
         Whether you're launching your first business, struggling to increase sales, or looking to scale your existing venture, this toolkit provides the exact questions you need to unlock growth with confidence.
-              </p>
-              <a 
-                href="https://forms.gle/YCiXRvzX6G1w6Fa67" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="book-status-link"
-              >
-                <span className="book-status">Get the Book Now</span>
-              </a>
-            </div>
-          </div>
-        </section>
+      </p>
+      <a 
+        href="https://forms.gle/YCiXRvzX6G1w6Fa67" 
+        target="_blank"
+        rel="noopener noreferrer"
+        className="book-status-link"
+      >
+        <span className="book-status">Get the Book Now</span>
+      </a>
+    </div>
+  </div>
+</section>
 
         {/* Publications */}
         <section id="publications" className="publications-section">
