@@ -165,7 +165,7 @@ function App() {
           {/* Book Card - Single Image Display */}
           <div className="book-card">
             <div className="book-image">
-              <img src="/images/bus-ig.png" alt="AI Business Growth Toolkit" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
+              <img src="/images/frnt.png" alt="AI Business Growth Toolkit" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
             </div>
             <div className="book-content">
               <h3 className="book-title">Now Available: AI Business Growth Toolkit</h3>
