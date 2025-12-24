@@ -174,7 +174,7 @@ function App() {
         Whether you're launching your first business, struggling to increase sales, or looking to scale your existing venture, this toolkit provides the exact questions you need to unlock growth with confidence.
               </p>
               <a 
-                href="https://selar.com/m/opeyemitaiwo" 
+                href="https://forms.gle/YCiXRvzX6G1w6Fa67" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="book-status-link"
