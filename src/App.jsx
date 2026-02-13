@@ -76,7 +76,7 @@ function App() {
             <div className="org-container">
               <div className="org-item">
                 <h3>Morgan TechFest</h3>
-                <p>Morgan TechFest is an in-person tech conference that helps students explore tech careers and network with industry experts</p>
+                <p>Morgan TechFest empowers students through collaborative projects and an annual tech conference that connects innovation with career opportunities.</p>
                 <div className="org-links">
                   <a href="https://www.morgantechfest.com/" target="_blank" rel="noopener noreferrer" className="org-link">
                     🌐 Website
@@ -90,8 +90,8 @@ function App() {
                 </div>
               </div>
               <div className="org-item">
-                <h3>Favored Online</h3>
-                <p>Turn learning into real-world tech impact with hands-on projects and AI-powered career recommendations.</p>
+                <h3>Favored Online Inc.</h3>
+                <p>Favored Online is a digital innovation company that builds AI-powered, custom web and technology solutions to help businesses transform, grow, and thrive online.</p>
                 <div className="org-links">
                   <a href="https://favoredonline.com/" target="_blank" rel="noopener noreferrer" className="org-link">
                     🌐 Website
