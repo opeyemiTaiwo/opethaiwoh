@@ -93,7 +93,9 @@ function App() {
               </div>
               <div className="org-item">
                 <h3>Favored Online Inc.</h3>
-                <p>Favored Online is a digital innovation company that builds AI-powered, custom web and technology solutions to help businesses transform, grow, and thrive online.</p>
+                <p>Favored Online is a digital innovation organization that builds cutting-edge technology solutions for businesses and empowers the next generation of tech professionals.
+
+</p>
                 <div className="org-links">
                   <a href="https://favoredonline.com/" target="_blank" rel="noopener noreferrer" className="org-link">
                     🌐 Website
