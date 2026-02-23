@@ -76,7 +76,9 @@ function App() {
             <div className="org-container">
               <div className="org-item">
                 <h3>Morgan TechFest</h3>
-                <p>Morgan TechFest empowers students through collaborative projects and an annual tech conference that connects innovation with career opportunities.</p>
+                 <p>
+  Morgan TechFest empowers the next generation of technology leaders through an annual in-person conference, enabling students to discover transformative technologies and evolving career pathways, network with industry and academic leaders, and innovate through impactful research and project showcases.
+</p>
                 <div className="org-links">
                   <a href="https://www.morgantechfest.com/" target="_blank" rel="noopener noreferrer" className="org-link">
                     🌐 Website
