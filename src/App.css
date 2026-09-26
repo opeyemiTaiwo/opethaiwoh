@@ -448,6 +448,23 @@ a {
   color: #cfc8de;
 }
 
+.research-body .research-link-row {
+  margin-top: 28px;
+}
+
+.research-link {
+  font-weight: 600;
+  color: var(--paper);
+  text-decoration: underline;
+  text-decoration-color: #f07fc0;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+.research-link:hover {
+  color: #f07fc0;
+}
+
 /* ---------- Recognition ---------- */
 .recognition-grid {
   display: grid;

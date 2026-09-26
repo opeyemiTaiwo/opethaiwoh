@@ -40,6 +40,7 @@ export const ventures = {
 };
 
 export const research = {
+  scholarUrl: 'https://scholar.google.com/citations?user=Krnac-4AAAAJ&hl=en',
   summary:
     'My research explores how AI systems that combine language and video can analyze forensic footage and follow specific people across crowded scenes, even when they are briefly hidden from view.',
   focus:

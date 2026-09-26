@@ -200,6 +200,11 @@ function App() {
             <div className="research-body">
               <p className="research-lead">{research.summary}</p>
               <p>{research.focus}</p>
+              <p className="research-link-row">
+                <ExternalLink href={research.scholarUrl} className="research-link">
+                  See my publications on Google Scholar
+                </ExternalLink>
+              </p>
             </div>
           </div>
         </section>
