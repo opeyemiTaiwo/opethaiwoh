@@ -5,7 +5,7 @@ export const person = {
   name: 'Opeyemi Adeniran',
   shortName: 'Yemi',
   intro:
-    'Founder of She Model Tech and PhD researcher in artificial intelligence at Morgan State University. I study how AI understands video, and when it gets things wrong.',
+    'Founder of She Model Tech and PhD researcher in artificial intelligence. I work on computer vision and multimodal AI, building systems that are more accurate and trustworthy.',
   portrait: '/images/yemi-portrait.webp',
   headshotUrl:
     'https://drive.google.com/drive/folders/1Ajy_vh_t_8VmQUljrs_lzGMeUv8GkJLC?usp=sharing',
@@ -15,7 +15,7 @@ export const ventures = {
   featured: {
     name: 'She Model Tech',
     role: 'Founder',
-    tagline: 'Proof over pedigree.',
+    tagline: 'Ascend.\nAchieve.\nAdvance.',
     description:
       'A platform that connects tech professionals with real-world projects, verified skill badges, and a community built to accelerate their careers.',
     links: [
@@ -39,33 +39,32 @@ export const ventures = {
 };
 
 export const research = {
-  lab: 'Center for Equitable AI and Machine Learning Systems (CEAMLS), Morgan State University',
   summary:
     'My research explores how AI systems that combine language and video can analyze forensic footage and follow specific people across crowded scenes, even when they are briefly hidden from view.',
   focus:
-    'I focus on when and why these models get things wrong, so they can be made more trustworthy before anyone relies on them.',
+    'I focus on how, when, and why these models get things wrong, so they can be made more trustworthy before anyone relies on them.',
 };
 
-// Leave year as '' when you don't want one shown.
+// Leave year as '' when you don't want one shown. `note` is optional.
 export const recognition = {
   honors: [
     { title: 'RealLIST Innovator, Maryland — Technical.ly', year: '2026' },
+    { title: 'Featured in Forbes', year: '2026' },
+    { title: 'Morgan State Academy Trailblazer Award', year: '2023–2026' },
     { title: '2nd Place, Wealth Summit Live Pitch', year: '2025' },
-    { title: 'Featured in Forbes', year: '' },
-    { title: 'IBM Masters Fellowship Award', year: '' },
-    { title: 'Morgan State Academy Trailblazer Award', year: '' },
+    { title: 'IBM Masters Fellowship Award', year: '2022' },
   ],
   research: [
     { title: "Published at IEEE ICDM, one of the world's top AI conferences (CORE A*)", year: '2026' },
-    { title: 'Best Research Paper Award, Electrical and Computer Engineering Division', year: '' },
+    { title: 'Best Research Paper Award, Electrical and Computer Engineering Division', year: '2023' },
   ],
 };
 
 export const leadership = [
-  { title: 'Favored Online Inc., Founder', year: '' },
-  { title: 'Google Women Techmakers Ambassador', year: '2022' },
-  { title: 'Global AI Hub Community Lead', year: '2021–2023' },
-  { title: 'Omdena Lagos Nigeria, Chapter Lead', year: '2021–2023' },
+  { title: 'Google Women Techmakers Ambassador', year: '2022–2023' },
+  { title: 'Global AI Hub Community Lead', year: '2022–2023' },
+  { title: 'Omdena Lagos Nigeria, Chapter Lead', year: '2021–2022' },
+  { title: 'Favored Online Inc., Founder', year: '2018–2022', note: 'Transitioned into Morgan TechFest and She Model Tech' },
 ];
 
 export const bios = {

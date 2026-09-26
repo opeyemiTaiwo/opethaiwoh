@@ -1,259 +1,268 @@
 import { useState } from 'react';
 import './App.css';
+import { BrandIcon } from './icons';
+import { person, ventures, research, recognition, leadership, bios, socials } from './content';
 
-function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [formData, setFormData] = useState({ email: '' });
-  const [showSuccess, setShowSuccess] = useState(false);
+const NAV = [
+  { href: '#work', label: 'Work' },
+  { href: '#research', label: 'Research' },
+  { href: '#recognition', label: 'Recognition' },
+  { href: '#bio', label: 'Bio and headshot' },
+  { href: '#contact', label: 'Contact' },
+];
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
-  const handleNavClick = () => setMenuOpen(false);
-  const handleChange = (e) => setFormData({ email: e.target.value });
+function ExternalLink({ href, children, className }) {
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
+      {children}
+    </a>
+  );
+}
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      mode: 'no-cors'
-    }).then(() => {
-      setShowSuccess(true);
-      setFormData({ email: '' });
-      setTimeout(() => setShowSuccess(false), 5000);
-    });
+function YearList({ items }) {
+  return (
+    <ul className="year-list">
+      {items.map((item) => (
+        <li key={item.title}>
+          <span className="year-list-year">{item.year}</span>
+          <span className="year-list-title">
+            {item.title}
+            {item.note && <span className="year-list-note">{item.note}</span>}
+          </span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function BioKit() {
+  const [open, setOpen] = useState(null);
+  const [copied, setCopied] = useState(false);
+
+  const toggle = (key) => {
+    setCopied(false);
+    setOpen(open === key ? null : key);
+  };
+
+  const copy = () => {
+    const text = bios[open].paragraphs.join('\n\n');
+    navigator.clipboard
+      ?.writeText(text)
+      .then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      })
+      .catch(() => {});
   };
 
   return (
-    <div className="App">
-      {/* Navigation */}
-      <nav className="navbar">
-        <div className="nav-container">
-          <div className="logo">
-            <img src="/images/Opeyemi_1C.PNG" alt="Opeyemi Adeniran" className="logo-icon" />
-            <a href="#home">Opeyemi Adeniran</a>
-          </div>
-          
-          <button className={`hamburger ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
-            <span></span>
-            <span></span>
-            <span></span>
+    <>
+      <div className="bio-actions">
+        {Object.entries(bios).map(([key, bio]) => (
+          <button
+            key={key}
+            type="button"
+            className="btn btn-outline"
+            aria-expanded={open === key}
+            aria-controls="bio-panel"
+            onClick={() => toggle(key)}
+          >
+            {open === key ? `Hide ${bio.label.toLowerCase()}` : `Show ${bio.label.toLowerCase()}`}
           </button>
+        ))}
+        <ExternalLink href={person.headshotUrl} className="btn btn-solid">
+          Download headshot
+        </ExternalLink>
+      </div>
 
-          <ul className={`nav-menu ${menuOpen ? 'active' : ''}`}>
-            <li><a href="#home" onClick={handleNavClick}>Home</a></li>
-            <li><a href="#about" onClick={handleNavClick}>About</a></li>
-            <li><a href="#speaking" onClick={handleNavClick}>Speaking</a></li>
-            <li><a href="#books" onClick={handleNavClick}>Books</a></li>
-            <li><a href="#publications" onClick={handleNavClick}>Publications</a></li>
-            <li><a href="#contact" onClick={handleNavClick}>Contact</a></li>
-          </ul>
+      {open && (
+        <div className="bio-panel" id="bio-panel">
+          <div className="bio-panel-head">
+            <h3>{bios[open].label}</h3>
+            <button type="button" className="btn btn-small" onClick={copy}>
+              {copied ? 'Copied' : 'Copy text'}
+            </button>
+          </div>
+          {bios[open].paragraphs.map((p) => (
+            <p key={p.slice(0, 40)}>{p}</p>
+          ))}
         </div>
-      </nav>
+      )}
+    </>
+  );
+}
 
-      {menuOpen && <div className="overlay" onClick={toggleMenu}></div>}
+function App() {
+  const featured = ventures.featured;
 
-      <main className="main-content">
-        {/* Hero Section */}
-        <section id="home" className="hero-section">
-          <div className="hero-content">
-            <img src="/images/Opeyemi_1C.PNG" alt="Opeyemi Taiwo Adeniran" className="hero-image" />
-            <h1 className="hero-title">AI Research Engineer & Author</h1>
-            <p className="hero-subtitle">
-              Opeyemi Taiwo Adeniran is an AI researcher, author, and technology entrepreneur passionate about guiding people into successful careers in Tech. 
-            </p>
-            <a href="https://docs.google.com/document/d/1fwHGUdVhgyZ8MSyUjcHT28i4tYdfvFBFHyClC0E68Gc/edit" target="_blank" rel="noopener noreferrer" className="cta-button">
-              Learn more about me
-            </a>
-          </div>
-        </section>
+  return (
+    <>
+      <a href="#main" className="skip-link">Skip to content</a>
 
-        {/* About Section */}
-        <section id="about" className="about-section">
-          {/* Organizations */}
-          <div className="organizations">
-            <h2 className="section-title">Founded Organizations</h2>
-            <div className="org-container">
-              <div className="org-item">
-                <h3>Morgan TechFest</h3>
-                 <p>
- Morgan TechFest empowers future technology leaders by connecting students to innovation, career opportunities, and industry leaders through its annual conference.
-</p>
-                <div className="org-links">
-                  <a href="https://www.morgantechfest.com/" target="_blank" rel="noopener noreferrer" className="org-link">
-                    🌐 Website
-                  </a>
-                  <a href="https://www.instagram.com/morgantechfest/" target="_blank" rel="noopener noreferrer" className="org-link">
-                    📷 Instagram
-                  </a>
-                  <a href="https://medium.com/@morgantechfest" target="_blank" rel="noopener noreferrer" className="org-link">
-                    📝 Medium
-                  </a>
+      <header className="site-header">
+        <div className="wrap header-inner">
+          <a href="#top" className="wordmark">{person.name}</a>
+          <nav aria-label="Main">
+            <ul className="nav-list">
+              {NAV.map((item) => (
+                <li key={item.href}><a href={item.href}>{item.label}</a></li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main id="main">
+        {/* Hero */}
+        <section id="top" className="hero">
+          <div className="wrap hero-grid">
+            <div className="hero-text">
+              <h1 className="hero-name">
+                Opeyemi
+                <br />
+                Adeniran
+              </h1>
+              <p className="hero-intro">{person.intro}</p>
+              <div className="hero-cta">
+                <ExternalLink href={featured.links[0].href} className="btn btn-solid">
+                  Visit She Model Tech
+                </ExternalLink>
+                <a href="#bio" className="btn btn-outline">Get my bio</a>
+              </div>
+            </div>
+
+            <figure className="portrait">
+              <div className="portrait-stage">
+                <img
+                  src={person.portrait}
+                  alt="Portrait of Opeyemi Adeniran"
+                  width="900"
+                  height="874"
+                  fetchPriority="high"
+                />
+                <div className="track-box" aria-hidden="true">
+                  <span className="track-tag">{person.shortName.toLowerCase()} 0.99</span>
                 </div>
               </div>
-              <div className="org-item">
-                <h3>Favored Online Inc.</h3>
-                <p>Favored Online is a digital innovation organization that builds cutting-edge technology solutions for businesses and empowers the next generation of tech professionals.
+            </figure>
+          </div>
+        </section>
 
-</p>
-                <div className="org-links">
-                  <a href="https://favoredonline.com/" target="_blank" rel="noopener noreferrer" className="org-link">
-                    🌐 Website
-                  </a>
-                  <a href="https://www.instagram.com/favoredonline/" target="_blank" rel="noopener noreferrer" className="org-link">
-                    📷 Instagram
-                  </a>
-                  <a href="https://medium.com/@opefavored" target="_blank" rel="noopener noreferrer" className="org-link">
-                    📝 Medium
-                  </a>
+        {/* Ventures */}
+        <section id="work" className="section">
+          <div className="wrap">
+            <h2 className="section-heading">What I'm building</h2>
+
+            <article className="feature">
+              <div className="feature-main">
+                <p className="feature-role">{featured.role}</p>
+                <h3 className="feature-name">{featured.name}</h3>
+                <p className="feature-desc">{featured.description}</p>
+                <div className="link-row">
+                  {featured.links.map((l) => (
+                    <ExternalLink key={l.href} href={l.href} className="text-link">{l.label}</ExternalLink>
+                  ))}
                 </div>
               </div>
+              <p className="feature-tagline">{featured.tagline}</p>
+            </article>
+
+            {ventures.others.map((v) => (
+              <article key={v.name} className="venture">
+                <div>
+                  <h3 className="venture-name">{v.name}</h3>
+                  <p className="venture-role">{v.role}</p>
+                </div>
+                <div>
+                  <p className="venture-desc">{v.description}</p>
+                  <div className="link-row">
+                    {v.links.map((l) => (
+                      <ExternalLink key={l.href} href={l.href} className="text-link">{l.label}</ExternalLink>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* Research */}
+        <section id="research" className="section section-ink">
+          <div className="wrap research-grid">
+            <h2 className="section-heading">Research</h2>
+            <div className="research-body">
+              <p className="research-lead">{research.summary}</p>
+              <p>{research.focus}</p>
             </div>
           </div>
+        </section>
 
-          {/* Leadership Positions */}
-          <div className="leadership-positions">
-            <h3>Past Leadership & Non-profit Positions</h3>
-            <p>
-              Throughout my journey in technology and community building, I have held various leadership positions that have 
-              contributed to my growth and the global tech community:
+        {/* Recognition */}
+        <section id="recognition" className="section">
+          <div className="wrap">
+            <h2 className="section-heading">Recognition</h2>
+            <div className="recognition-grid">
+              <div>
+                <h3 className="list-heading">Honors</h3>
+                <YearList items={recognition.honors} />
+              </div>
+              <div>
+                <h3 className="list-heading">Research</h3>
+                <YearList items={recognition.research} />
+                <h3 className="list-heading list-heading-spaced">Earlier leadership</h3>
+                <YearList items={leadership} />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Bio kit */}
+        <section id="bio" className="section section-tint">
+          <div className="wrap">
+            <h2 className="section-heading">Bio and headshot</h2>
+            <p className="section-note">
+              For event organizers and press. Open a bio to read or copy it.
             </p>
-            <div className="position-list">
-              <div className="position-item">
-                <span className="position-title">Google Women Tech Makers Ambassador</span>
-                <span className="position-year">2022</span>
-              </div>
-              <div className="position-item">
-                <span className="position-title">Global AI Hub Community Lead</span>
-                <span className="position-year">2021-2023</span>
-              </div>
-              <div className="position-item">
-                <span className="position-title">Omdena Lagos Nigeria, Chapter Lead</span>
-                <span className="position-year">2021-2023</span>
-              </div>
-            </div>
-            <p className="leadership-note">
-              These leadership roles have helped shape my experience in community building, empowering women in technology, 
-              and connecting global tech talents.
-            </p>
+            <BioKit />
           </div>
         </section>
-
-        {/* Speaking */}
-        <section id="speaking" className="speaking-section">
-          <h2 className="section-title">Speaking Engagements</h2>
-          <p className="section-subtitle">Sharing insights on AI, technology, and innovation at conferences and events worldwide, 
-            pioneering cutting-edge research in artificial intelligence, empowering professionals to harness AI technologies, 
-            and guiding aspiring tech professionals to build thriving careers in the rapidly evolving technology landscape.</p>
-          
-           {/* Bio Links */}
-          <div className="link-cards-container bio-links">
-            <div className="link-card">
-             <a href="https://drive.google.com/drive/folders/1HKJXbyr7cbsnTj4c12i8Qb0GJVWym31f?usp=sharing" target="_blank" rel="noopener noreferrer">
-              View Past Speaking Engagements
-              </a>
-            </div>
-            <div className="link-card">
-              <a href="https://drive.google.com/drive/folders/1Ajy_vh_t_8VmQUljrs_lzGMeUv8GkJLC?usp=sharing" target="_blank" rel="noopener noreferrer">
-                Download Headshot
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Books Section */}
-<section id="books" className="books-section">
-  <h2 className="section-title">AI Business Growth Toolkit</h2>
-  <h3 className="section-subtitle">Strategic Prompts for Business Owners</h3>
- 
-  {/* Book Card - Single Image Display */}
-  <div className="book-card">
-    <div className="book-image">
-      <img 
-        src="/images/bk-cv.png" 
-        alt="AI Business Growth Toolkit" 
-        style={{ 
-          objectFit: 'contain', 
-          width: '100%', 
-          height: '100%' 
-        }} 
-      />
-    </div>
-    <div className="book-content">
-      <h3 className="book-title">Now Available: AI Business Growth Toolkit</h3>
-      <p className="book-description">
-        AI Business Growth Toolkit distills proven strategies from successful entrepreneurs and business experts into ready-to-use prompts that drive real results. 
-        Whether you're launching your first business, struggling to increase sales, or looking to scale your existing venture, this toolkit provides the exact questions you need to unlock growth with confidence.
-      </p>
-      <a 
-        href="https://selar.com/q3tk00n000" 
-        target="_blank"
-        rel="noopener noreferrer"
-        className="book-status-link"
-      >
-        <span className="book-status">Get the Book Now</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-        {/* Publications */}
-        <section id="publications" className="publications-section">
-          <h2 className="section-title">Recent Publications</h2>
-          <p className="section-subtitle">
-     Check out my peer-reviewed research on multimodal AI applications in security, forensic analytics, and medical imaging, focused on explainable and interpretable solutions.
-          </p>
-          <div className="publications-container">
-            <div className="publication-card">
-              <h3>Comparative Evaluation of Prompting Techniques for Forensic Video Analysis Using GPT-4o</h3>
-              <p>
-          This research evaluates how different prompting techniques affect LLM performance in forensic analysis.
-              </p>
-            </div>
-            <div className="publication-card">
-              <h3>Explainable MRI-Based Ensemble Learnable Architecture for Alzheimer's Disease Detection</h3>
-              <p> Pioneering research that combines cutting-edge AI techniques to detect Alzheimer's disease in its earliest stages, 
-                potentially enabling earlier intervention and treatment.</p>
-            </div>
-            <div className="publication-card">
-              <h3>Evaluating Prompting Strategies in Multimodal Large Language Models for Human-Aligned Forensic Video Analysis</h3>
-              <p>This study evaluates eight prompting techniques to optimize human-aligned responses in multimodal large language models (MLLMs) for forensic applications.</p>
-            </div>
-          </div>
-          <div className="publications-cta">
-            <a href="https://scholar.google.com/citations?user=Krnac-4AAAAJ&hl" target="_blank" rel="noopener noreferrer" className="cta-button">
-              View All Publications
-            </a>
-          </div>
-        </section>
-        
         {/* Contact */}
-        <section id="contact" className="contact-section">
-          <h2 className="section-title">Get in Touch</h2>
-          <p className="section-subtitle">Connect with me for inquiries, speaking engagements, and collaborations.</p>
-          <div className="link-cards-container">
-            <div className="link-card">
-              <p>Email</p>
-              <a href="mailto:opeyemitaiwo81@gmail.com">opeyemitaiwo81@gmail.com</a>
-            </div>
-            <div className="link-card">
-              <p>Resume</p>
-              <a href="https://opethaiwoh.github.io/opeyemi.github.io/" target="_blank" rel="noopener noreferrer">View Resume</a>
-            </div>
+        <section id="contact" className="section">
+          <div className="wrap">
+            <h2 className="section-heading">Get in touch</h2>
+            <p className="section-note">Send me a message on any of these.</p>
+            <ul className="contact-list">
+              {socials.map((s) => (
+                <li key={s.href}>
+                  <ExternalLink href={s.href} className={`contact-link contact-${s.icon}`}>
+                    <span className="contact-icon"><BrandIcon name={s.icon} size={26} /></span>
+                    <span className="contact-text">
+                      <span className="contact-label">{s.label}</span>
+                      <span className="contact-handle">{s.handle}</span>
+                    </span>
+                  </ExternalLink>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="footer">
-        <div className="social-links">
-          <a href="https://x.com/opethaiwoh" target="_blank" rel="noopener noreferrer">𝕏</a>
-          <a href="https://instagram.com/stories/opethaiwoh/" target="_blank" rel="noopener noreferrer">📷</a>
-          <a href="https://linkedin.com/in/opeyemi-adeniran/" target="_blank" rel="noopener noreferrer">💼</a>
+      <footer className="site-footer">
+        <div className="wrap footer-inner">
+          <ul className="social-list">
+            {socials.map((s) => (
+              <li key={s.href}>
+                <a href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} className="social-icon">
+                  <BrandIcon name={s.icon} size={20} />
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p>© {new Date().getFullYear()} {person.name}</p>
         </div>
-        <p>© 2025 Opeyemi Taiwo Adeniran. All Rights Reserved.</p>
       </footer>
-    </div>
+    </>
   );
 }
 
