@@ -28,11 +28,12 @@ export const ventures = {
       name: 'Morgan TechFest',
       role: 'Founder and Lead Director, since 2022',
       description:
-        'An annual student technology innovation conference at Morgan State University that connects students with innovation, career opportunities, and industry leaders.',
+        'An annual student technology innovation conference at Morgan State University that connects students with innovation, career opportunities, and industry leaders. Featured in Forbes, Yahoo Tech, and HBCU News as an example of how HBCUs drive innovation.',
       links: [
         { label: 'Website', href: 'https://www.morgantechfest.com/' },
         { label: 'Instagram', href: 'https://www.instagram.com/morgantechfest/' },
         { label: 'LinkedIn', href: 'https://www.linkedin.com/company/morgan-techfest/' },
+        { label: 'In the news', href: 'https://www.morgantechfest.com/highlights.html' },
       ],
     },
   ],
