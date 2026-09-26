@@ -45,11 +45,11 @@ export const research = {
     'I focus on how, when, and why these models get things wrong, so they can be made more trustworthy before anyone relies on them.',
 };
 
-// Leave year as '' when you don't want one shown. `note` is optional.
+// Leave year as '' when you don't want one shown. `note` and `href` (a link) are optional.
 export const recognition = {
   honors: [
-    { title: 'RealLIST Innovator, Maryland — Technical.ly', year: '2026' },
-    { title: 'Featured in Forbes', year: '2026' },
+    { title: 'RealLIST Innovator, Maryland — Technical.ly', year: '2026', href: 'https://technical.ly/workforce/reallist-innovators-2026-maryland/' },
+    { title: 'Featured in Forbes', year: '2026', href: 'https://www.forbes.com/sites/marybethgasman/2026/07/21/morgan-state-techfest-shows-what-hbcus-contribute-to-innovation/' },
     { title: 'Morgan State Academy Trailblazer Award', year: '2023–2026' },
     { title: '2nd Place, Wealth Summit Live Pitch', year: '2025' },
     { title: 'IBM Masters Fellowship Award', year: '2022' },
@@ -61,10 +61,10 @@ export const recognition = {
 };
 
 export const leadership = [
+  { title: 'Favored Online Inc., Founder', year: '2018–2026', note: 'Transitioned into Morgan TechFest and She Model Tech' },
   { title: 'Google Women Techmakers Ambassador', year: '2022–2023' },
   { title: 'Global AI Hub Community Lead', year: '2022–2023' },
   { title: 'Omdena Lagos Nigeria, Chapter Lead', year: '2021–2022' },
-  { title: 'Favored Online Inc., Founder', year: '2018–2022', note: 'Transitioned into Morgan TechFest and She Model Tech' },
 ];
 
 export const bios = {

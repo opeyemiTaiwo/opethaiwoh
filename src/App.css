@@ -77,6 +77,15 @@ a {
   padding: 0 var(--gutter);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
 .skip-link {
   position: absolute;
   left: 12px;
@@ -479,6 +488,17 @@ a {
   font-weight: 500;
 }
 
+.year-list-link {
+  text-decoration: underline;
+  text-decoration-color: var(--magenta);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+}
+
+.year-list-link:hover {
+  color: var(--magenta);
+}
+
 .year-list-note {
   display: block;
   margin-top: 4px;
@@ -625,25 +645,6 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-}
-
-.social-list {
-  display: flex;
-  gap: 10px;
-}
-
-.social-icon {
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  color: var(--ink);
-  transition: color 0.15s ease, background-color 0.15s ease;
-}
-
-.social-icon:hover {
-  background: var(--tint);
 }
 
 /* ---------- Responsive ---------- */

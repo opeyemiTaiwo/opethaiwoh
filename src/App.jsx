@@ -26,7 +26,14 @@ function YearList({ items }) {
         <li key={item.title}>
           <span className="year-list-year">{item.year}</span>
           <span className="year-list-title">
-            {item.title}
+            {item.href ? (
+              <ExternalLink href={item.href} className="year-list-link">
+                {item.title}
+                <span className="visually-hidden"> (opens in a new tab)</span>
+              </ExternalLink>
+            ) : (
+              item.title
+            )}
             {item.note && <span className="year-list-note">{item.note}</span>}
           </span>
         </li>
@@ -205,11 +212,11 @@ function App() {
               <div>
                 <h3 className="list-heading">Honors</h3>
                 <YearList items={recognition.honors} />
+                <h3 className="list-heading list-heading-spaced">Research</h3>
+                <YearList items={recognition.research} />
               </div>
               <div>
-                <h3 className="list-heading">Research</h3>
-                <YearList items={recognition.research} />
-                <h3 className="list-heading list-heading-spaced">Earlier leadership</h3>
+                <h3 className="list-heading">Earlier leadership</h3>
                 <YearList items={leadership} />
               </div>
             </div>
@@ -250,15 +257,6 @@ function App() {
 
       <footer className="site-footer">
         <div className="wrap footer-inner">
-          <ul className="social-list">
-            {socials.map((s) => (
-              <li key={s.href}>
-                <a href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} className="social-icon">
-                  <BrandIcon name={s.icon} size={20} />
-                </a>
-              </li>
-            ))}
-          </ul>
           <p>© {new Date().getFullYear()} {person.name}</p>
         </div>
       </footer>
