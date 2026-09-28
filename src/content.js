@@ -73,21 +73,19 @@ export const bios = {
   short: {
     label: 'Short bio',
     paragraphs: [
-      'Opeyemi "Yemi" Adeniran is the Founder of She Model Tech, a platform where tech professionals build real experience, earn verified skill badges, and get discovered on proof over pedigree. She is also a PhD researcher in AI at Morgan State University\'s CEAMLS, studying how AI can analyze forensic video and where it goes wrong. Featured in Forbes, with work accepted at IEEE ICDM 2026, she is a 2026 Technical.ly RealLIST Innovators honoree (Maryland), one of 15 statewide, an IBM Master Fellowship recipient, and the founder of Morgan TechFest, driven by faith and a passion for using technology to serve and uplift.',
+      'Opeyemi "Yemi" Adeniran is the Founder of She Model Tech, a platform where tech professionals build real experience and earn verified skill badges. She is also a PhD researcher in electrical and computer engineering, specializing in artificial intelligence, at Morgan State University, where she studies how, when, and why multimodal AI systems get things wrong so they can be made more trustworthy. Featured in Forbes, with research accepted at IEEE ICDM 2026, she was named to Technical.ly\'s 2026 RealLIST Innovators list for Maryland, is an IBM Master Fellowship recipient, and founded Morgan TechFest. A woman of deep faith, she uses technology as a tool to teach, serve, and uplift.',
     ],
   },
   long: {
     label: 'Long bio',
     paragraphs: [
-      'Opeyemi "Yemi" Adeniran is the Founder of She Model Tech and a PhD researcher in computer science and artificial intelligence at Morgan State University. She Model Tech is a platform that helps tech professionals build real experience through real-world projects, earn verified skill badges, and grow within a community designed to accelerate their careers. Its guiding idea is simple: proof over pedigree.',
-      'At Morgan State, Yemi works within the Center for Equitable AI and Machine Learning Systems (CEAMLS). Her research explores how AI systems that combine language and video can analyze forensic footage and follow specific people across crowded scenes, with a focus on when and why these models get things wrong so they can be made more trustworthy.',
-      'Her work has been featured in Forbes and accepted at IEEE ICDM 2026, one of the world\'s leading conferences in artificial intelligence and data science, and she was named to Technical.ly\'s 2026 RealLIST Innovators (Maryland), one of 15 statewide honorees. She is also an IBM Master Fellowship recipient and a co-inventor on two university inventions.',
-      'Yemi is the Founder and Lead Director of Morgan TechFest, an annual student technology innovation conference she launched in 2022. A woman of deep faith, she brings that conviction into all she builds, using technology as a tool to teach, serve, and uplift.',
+      'Opeyemi "Yemi" Adeniran is the Founder of She Model Tech and a PhD researcher in electrical and computer engineering, specializing in artificial intelligence, at Morgan State University. There, she works within the Center for Equitable AI and Machine Learning Systems (CEAMLS). Her research explores how AI systems that combine language and video can analyze forensic footage and follow specific people across crowded scenes, even when they are briefly out of view. She focuses on how, when, and why these models get things wrong, so they can be made more trustworthy.',
+      'Yemi has been featured in Forbes, and her research was recently accepted at IEEE ICDM 2026, one of the world\'s leading conferences in artificial intelligence and data science. She was named to Technical.ly\'s 2026 RealLIST Innovators list for Maryland, is an IBM Master Fellowship recipient, and is a co-inventor on two university inventions.',
+      'Beyond the lab, Yemi founded Morgan TechFest, an annual student technology innovation conference she launched in 2022. She previously served as a Google Women Techmakers Ambassador, Partnership Manager and AI Evangelist at Omdena, and Community Lead at Global AI Hub. A woman of deep faith, she brings that conviction into all she builds, using technology as a tool to teach, serve, and uplift.',
     ],
   },
 };
 
-// Where people can reach Yemi. `icon` must be instagram, linkedin, or x.
 export const socials = [
   { icon: 'instagram', label: 'Instagram', handle: '@theopeyemiadeniran', href: 'https://www.instagram.com/theopeyemiadeniran/' },
   { icon: 'linkedin', label: 'LinkedIn', handle: 'Opeyemi Adeniran', href: 'https://www.linkedin.com/in/opeyemi-adeniran/' },
