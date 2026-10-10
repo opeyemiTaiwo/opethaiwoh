@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import './App.css';
 import { BrandIcon } from './icons';
 import { person, ventures, research, recognition, leadership, bios, socials } from './content';
@@ -10,6 +10,84 @@ const NAV = [
   { href: '#bio', label: 'Bio and headshot' },
   { href: '#contact', label: 'Contact' },
 ];
+
+// Must match the breakpoint in App.css where the menu button appears.
+const MENU_QUERY = '(max-width: 860px)';
+
+function SiteHeader() {
+  const [open, setOpen] = useState(false);
+  const headerRef = useRef(null);
+  const buttonRef = useRef(null);
+
+  const close = useCallback((returnFocus = false) => {
+    setOpen(false);
+    if (returnFocus) buttonRef.current?.focus();
+  }, []);
+
+  useEffect(() => {
+    if (!open) return undefined;
+
+    const onKey = (e) => {
+      if (e.key === 'Escape') close(true);
+    };
+    const onPointer = (e) => {
+      if (headerRef.current && !headerRef.current.contains(e.target)) close();
+    };
+    // Close if the screen grows past the mobile breakpoint (rotation, resize).
+    const mq = window.matchMedia(MENU_QUERY);
+    const onChange = (e) => {
+      if (!e.matches) close();
+    };
+
+    document.addEventListener('keydown', onKey);
+    document.addEventListener('pointerdown', onPointer);
+    mq.addEventListener('change', onChange);
+
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.removeEventListener('pointerdown', onPointer);
+      mq.removeEventListener('change', onChange);
+    };
+  }, [open, close]);
+
+  return (
+    <header className={`site-header${open ? ' is-open' : ''}`} ref={headerRef}>
+      <div className="wrap header-inner">
+        <a href="#top" className="wordmark" onClick={() => close()}>
+          {person.name}
+        </a>
+
+        <button
+          ref={buttonRef}
+          type="button"
+          className="menu-toggle"
+          aria-expanded={open}
+          aria-controls="site-nav"
+          onClick={() => setOpen((v) => !v)}
+        >
+          <span className="visually-hidden">{open ? 'Close menu' : 'Open menu'}</span>
+          <span className="menu-toggle-bars" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+          </span>
+        </button>
+
+        <nav id="site-nav" className="site-nav" aria-label="Main">
+          <ul className="nav-list">
+            {NAV.map((item) => (
+              <li key={item.href}>
+                <a href={item.href} onClick={() => close()}>
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </header>
+  );
+}
 
 function ExternalLink({ href, children, className }) {
   return (
@@ -106,18 +184,7 @@ function App() {
     <>
       <a href="#main" className="skip-link">Skip to content</a>
 
-      <header className="site-header">
-        <div className="wrap header-inner">
-          <a href="#top" className="wordmark">{person.name}</a>
-          <nav aria-label="Main">
-            <ul className="nav-list">
-              {NAV.map((item) => (
-                <li key={item.href}><a href={item.href}>{item.label}</a></li>
-              ))}
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main id="main">
         {/* Hero */}
