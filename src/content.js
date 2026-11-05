@@ -39,6 +39,35 @@ export const ventures = {
   ],
 };
 
+export const books = {
+  note: 'Practical guides for growing a career and a business with AI. Click a book to get your copy.',
+  storeUrl: 'https://selar.com/m/favoredonline',
+  // `cover` is optional; without one the site draws a simple text cover.
+  items: [
+    {
+      title: 'Career Path in Tech',
+      subtitle: 'How to Start, Switch, and Grow in Technology in the Age of AI',
+      description:
+        'A guide to entering, switching into, and growing in tech as AI reshapes the field: finding your niche, choosing a learning path, and building a job-ready portfolio. Includes an AI Career Workbook with eight worksheets.',
+      format: 'PDF and EPUB, 302 pages',
+      cta: 'Get the book',
+      href: 'https://selar.com/8j90958dp2',
+      cover:
+        'https://files.selar.co/product-images/2026/products/favoredonline/career-path-in-tech-how-t-selar.com-6aec32032c52f.png',
+    },
+    {
+      title: 'AI Business Growth Toolkit',
+      subtitle: 'Strategic Prompts for Business Owners',
+      description:
+        'A ready-to-use set of strategic AI prompts that help business owners plan, market, and grow with AI tools.',
+      format: 'Free download',
+      cta: 'Download free',
+      href: 'https://selar.com/q3tk00n000',
+      cover: '',
+    },
+  ],
+};
+
 export const research = {
   scholarUrl: 'https://scholar.google.com/citations?user=Krnac-4AAAAJ&hl=en',
   summary:

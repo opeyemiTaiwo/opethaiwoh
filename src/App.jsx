@@ -1,11 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import './App.css';
 import { BrandIcon } from './icons';
-import { person, ventures, research, recognition, leadership, bios, socials } from './content';
+import { person, ventures, books, research, recognition, leadership, bios, socials } from './content';
 
 const NAV = [
   { href: '#work', label: 'Work' },
   { href: '#research', label: 'Research' },
+  { href: '#books', label: 'Books' },
   { href: '#recognition', label: 'Recognition' },
   { href: '#bio', label: 'Bio and headshot' },
   { href: '#contact', label: 'Contact' },
@@ -94,6 +95,27 @@ function ExternalLink({ href, children, className }) {
     <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
       {children}
     </a>
+  );
+}
+
+function BookCover({ book }) {
+  const [failed, setFailed] = useState(false);
+  if (book.cover && !failed) {
+    return (
+      <img
+        className="book-cover"
+        src={book.cover}
+        alt={`Cover of ${book.title}`}
+        loading="lazy"
+        onError={() => setFailed(true)}
+      />
+    );
+  }
+  return (
+    <span className="book-cover book-cover-text" aria-hidden="true">
+      <span className="book-cover-title">{book.title}</span>
+      <span className="book-cover-author">{person.name}</span>
+    </span>
   );
 }
 
@@ -273,6 +295,34 @@ function App() {
                 </ExternalLink>
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* Books */}
+        <section id="books" className="section section-tint">
+          <div className="wrap">
+            <h2 className="section-heading">Books</h2>
+            <p className="section-note">{books.note}</p>
+            <ul className="book-list">
+              {books.items.map((b) => (
+                <li key={b.href} className="book">
+                  <ExternalLink href={b.href} className="book-cover-link">
+                    <BookCover book={b} />
+                    <span className="visually-hidden">{b.cta}: {b.title}</span>
+                  </ExternalLink>
+                  <div className="book-body">
+                    <h3 className="book-title">{b.title}</h3>
+                    <p className="book-subtitle">{b.subtitle}</p>
+                    <p className="book-desc">{b.description}</p>
+                    <p className="book-format">{b.format}</p>
+                    <ExternalLink href={b.href} className="btn btn-solid book-cta">{b.cta}</ExternalLink>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <p className="book-store">
+              <ExternalLink href={books.storeUrl} className="text-link">See all books and resources</ExternalLink>
+            </p>
           </div>
         </section>
 
