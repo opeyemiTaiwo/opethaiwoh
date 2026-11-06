@@ -88,6 +88,7 @@ export const recognition = {
   ],
   research: [
     { title: "Published at IEEE ICDM, one of the world's top AI conferences (CORE A*)", year: '2026' },
+    { title: 'Paper presented at the REACH-AI Workshop, ACM CIKM (CORE A)', year: '2026' },
     { title: 'Best Research Paper Award, Electrical and Computer Engineering Division', year: '2023' },
   ],
 };
