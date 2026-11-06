@@ -84,7 +84,7 @@ export const recognition = {
     { title: 'Morgan State Academy Trailblazer Award', year: '2023–2026' },
     { title: '2nd Place, Wealth Summit Live Pitch', year: '2025' },
     { title: 'IBM Masters Fellowship Award', year: '2022' },
-    { title: 'Netflix Advanced Data Science Bootcamp', year: '' },
+    { title: 'Netflix Advanced Data Science Bootcamp', year: '2022' },
   ],
   research: [
     { title: "Published at IEEE ICDM, one of the world's top AI conferences (CORE A*)", year: '2026' },
