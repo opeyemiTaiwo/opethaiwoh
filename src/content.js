@@ -84,6 +84,7 @@ export const recognition = {
     { title: 'Morgan State Academy Trailblazer Award', year: '2023–2026' },
     { title: '2nd Place, Wealth Summit Live Pitch', year: '2025' },
     { title: 'IBM Masters Fellowship Award', year: '2022' },
+    { title: 'Netflix Advanced Data Science Bootcamp', year: '' },
   ],
   research: [
     { title: "Published at IEEE ICDM, one of the world's top AI conferences (CORE A*)", year: '2026' },
@@ -92,7 +93,6 @@ export const recognition = {
 };
 
 export const leadership = [
-  { title: 'Favored Online Inc., Founder', year: '2018–2026', note: 'Transitioned into Morgan TechFest and She Model Tech' },
   { title: 'Google Women Techmakers Ambassador', year: '2022–2023' },
   { title: 'Global AI Hub Community Lead', year: '2022–2023' },
   { title: 'Omdena Lagos Nigeria, Chapter Lead', year: '2021–2022' },
